@@ -1,0 +1,9 @@
+02:30:55 **** Incremental Build of configuration Nios II for project task65 ****
+make all 
+Info: Building ../task65_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../task65_bsp/
+[BSP build complete]
+[task65 build complete]
+
+02:30:55 Build Finished (took 721ms)
+

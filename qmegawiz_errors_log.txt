@@ -1,0 +1,71 @@
+
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task1/system_template_de1_soc/system_template_de1_soc/pll.v
+
+Jan 21 02PM:06:34>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task1/system_template_de1_soc/system_template_de1_soc/pll.v
+
+Jan 21 02PM:06:35>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task1/system_template_de1_soc/system_template_de1_soc/pll.v
+
+Jan 21 02PM:06:36>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task1/system_template_de1_soc/system_template_de1_soc/pll.v
+
+Jan 21 02PM:06:39>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task1/system_template_de1_soc/system_template_de1_soc/pll.v
+
+Jan 21 02PM:58:37>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task1/system_template_de1_soc/system_template_de1_soc/pll.v
+
+Jan 21 02PM:58:42>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task1/system_template_de1_soc/system_template_de1_soc/pll.v
+
+Jan 21 02PM:59:44>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task1/system_template_de1_soc/system_template_de1_soc/pll.v
+
+Jan 21 02PM:59:48>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task1/system_template_de1_soc/system_template_de1_soc/pll.v
+
+Jan 21 03PM:01:17>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task3/system_template_de1_soc/pll.v
+
+Jan 24 03AM:52:17>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task3/system_template_de1_soc/pll.v
+
+Jan 25 10AM:59:12>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task3/system_template_de1_soc/pll.v
+
+Jan 25 11AM:14:27>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task3/system_template_de1_soc/pll.v
+
+Jan 25 11AM:14:29>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/rz01888/Desktop/year_three/DSD/Task3/system_template_de1_soc/pll.v
+
+Jan 25 11AM:25:06>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DSD_coursework/mul/simulation/modelsim
+vlpm_1
+Z1 !s110 1707837423
+!i10b 1
+!s100 bzBYW8U^J]TRga7Cehl=k2
+IIk?k@JHzkSYEll=X@d?Uc0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1707837247
+8D:/DSD_coursework/mul/lpm_1.v
+FD:/DSD_coursework/mul/lpm_1.v
+L0 39
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1707837423.000000
+!s107 D:/DSD_coursework/mul/lpm_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DSD_coursework/mul|D:/DSD_coursework/mul/lpm_1.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/DSD_coursework/mul
+Z7 tCvgOpt 0
+vmult_b8n
+R1
+!i10b 1
+!s100 mWBdma9=XbY65`bmQgnKh0
+I>SD>BQ?KgEWdBPEX2`NI41
+R2
+R0
+w1707837275
+8D:/DSD_coursework/mul/db/mult_b8n.v
+FD:/DSD_coursework/mul/db/mult_b8n.v
+L0 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/DSD_coursework/mul/db/mult_b8n.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DSD_coursework/mul/db|D:/DSD_coursework/mul/db/mult_b8n.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/DSD_coursework/mul/db
+R7
+vtb
+R1
+!i10b 1
+!s100 =J]imj<;ehzEGb8B<ogG92
+Ih0jhMO9jO9ZSDc@C]hZEM3
+R2
+R0
+w1707837246
+8D:/DSD_coursework/mul/testbench_1.v
+FD:/DSD_coursework/mul/testbench_1.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/DSD_coursework/mul/testbench_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DSD_coursework/mul|D:/DSD_coursework/mul/testbench_1.v|
+!i113 1
+R5
+R6
+R7

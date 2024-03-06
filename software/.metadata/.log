@@ -1,0 +1,1002 @@
+!SESSION 2024-02-16 01:27:47.962 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-16 01:28:21.310
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+!SESSION 2024-02-16 01:28:39.984 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data C:\Users\linmo\Desktop\DSD\test\system_template_de1_soc\software -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-16 01:28:46.123
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-16 01:29:28.919
+!MESSAGE Indexed 'task65_bsp' (83 sources, 64 headers) in 1.16 sec: 1,222 declarations; 2,687 references; 113 unresolved inclusions; 6 syntax errors; 195 unresolved names (4.8%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-16 01:29:30.948
+!MESSAGE Indexed 'task65' (1 sources, 0 headers) in 0.005 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 01:32:59.454
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 01:33:01.301
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 01:33:12.787
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 01:33:13.156
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 01:33:15.011
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:23:33.335
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-02-16 07:23:35.281
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [USB-1]', --device=2, --instance=0, --stop, --accept-bad-sysid, --sidp=0x1001030] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:23:35.361
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-02-16 07:23:37.554
+!MESSAGE Failed Executing: [nios2-download, '--cable=DE-SoC on localhost [USB-1]', --device=2, --instance=0, --go, --accept-bad-sysid, --sidp=0x1001030, /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-02-16 07:23:37.555
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:27:55.232
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:27:57.134
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:28:41.957
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:28:42.354
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:28:43.951
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:29:40.711
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:29:41.181
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:29:42.855
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+!SESSION 2024-02-16 07:33:04.639 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-02-16 07:33:08.983
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-16 07:33:15.848
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:33:24.772
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:33:26.540
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:33:43.842
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:33:44.250
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:33:46.112
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:34:37.636
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:34:38.099
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:34:39.753
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:35:01.543
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:35:01.917
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:35:03.553
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+!SESSION 2024-02-16 07:42:54.340 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-02-16 07:42:56.687
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-16 07:43:03.703
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:45:15.349
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:45:16.994
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:49:08.475
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:49:08.783
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:49:10.455
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:51:14.268
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:51:14.570
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:51:16.306
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:57:30.058
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:57:30.435
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 07:57:32.349
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:19:39.411
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:19:39.860
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:19:41.826
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:25:09.106
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:25:09.619
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:25:11.284
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:25:29.476
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:25:31.418
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:29:13.012
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:29:13.490
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:29:15.165
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:30:05.593
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:30:05.997
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:30:07.758
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:31:13.727
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:31:14.031
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:31:15.861
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:34:44.446
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:34:44.851
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:34:46.537
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:35:29.988
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:35:30.289
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:35:31.954
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:36:29.118
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:36:29.449
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:36:31.355
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:38:36.487
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:38:36.810
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:38:38.647
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:39:05.889
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:39:06.284
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:39:08.006
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:40:45.959
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:40:46.281
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:40:47.967
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+!SESSION 2024-02-16 08:45:28.994 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-02-16 08:45:31.296
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-16 08:45:37.590
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:55:57.095
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 08:55:58.783
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:10:33.564
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:10:33.952
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:10:35.726
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:12:02.656
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:12:04.396
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:15:32.055
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:15:33.816
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:16:05.256
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:16:06.941
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:18:10.023
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:18:10.340
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 09:18:12.126
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+!SESSION 2024-02-16 20:32:16.159 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-16 20:32:33.577
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-02-16 21:25:06.836
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-02-16 21:25:06.909
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:25:56.290
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:25:58.222
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:34:26.516
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:34:26.881
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:34:28.794
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:34:48.646
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:34:50.365
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:35:38.679
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:35:39.272
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:35:40.902
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:35:41.022
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:35:42.540
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:36:23.740
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:36:23.742
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:36:24.120
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:36:26.052
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:36:46.922
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:36:47.503
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:36:49.314
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:37:57.954
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:37:58.372
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:38:00.282
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:39:47.122
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:39:47.512
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:39:49.230
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:39:49.347
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:39:51.000
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:41:19.125
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:41:19.127
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:41:19.495
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:41:21.208
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:42:12.637
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:42:13.118
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:42:15.321
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:43:48.794
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:43:50.624
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:47:22.599
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:47:23.000
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:47:24.838
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:48:32.071
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:48:32.531
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:48:34.441
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:49:34.499
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:49:34.902
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:49:36.633
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:54:02.145
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:54:02.540
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:54:04.554
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:56:20.280
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:56:20.736
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 21:56:22.589
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:04:14.664
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:04:15.034
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:04:16.797
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:06:18.814
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:06:19.288
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:06:21.060
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:09:04.452
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:09:06.429
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:13:57.928
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:13:58.391
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:14:00.054
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:26:27.795
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:26:29.806
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:43:55.280
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:43:55.641
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:43:57.296
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:45:56.940
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:45:57.362
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:45:58.738
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:45:58.938
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:46:00.478
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:47:04.913
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:47:04.917
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:47:05.283
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 22:47:07.035
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+!SESSION 2024-02-16 23:03:37.172 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-02-16 23:03:48.355
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-16 23:04:03.322
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 23:05:53.845
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-16 23:05:55.659
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:14:17.200
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:14:17.737
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:14:19.576
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:43:27.746
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:43:28.199
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:43:29.862
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:45:18.321
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:45:18.634
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:45:20.325
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:46:15.465
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:46:15.986
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:46:17.746
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:49:11.023
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:49:11.500
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:49:13.206
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:50:22.939
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:50:24.785
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:51:03.326
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:51:05.003
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:51:55.637
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:51:56.018
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:51:57.674
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:53:42.688
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:53:43.026
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:53:44.834
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:54:08.411
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:54:08.736
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:54:10.318
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:54:47.320
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:54:47.640
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:54:49.699
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:55:26.569
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:55:26.885
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 00:55:28.776
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+!SESSION 2024-02-17 00:58:30.913 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-02-17 01:00:20.166
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-17 01:00:26.731
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 01:01:16.352
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 01:01:17.954
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 01:02:32.991
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 01:02:33.497
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 01:02:35.167
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 01:03:29.520
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 01:03:30.008
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 01:03:31.725
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY org.eclipse.ui 4 4 2024-02-17 01:03:50.769
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@1c215c31)} vs {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@58bad46f)}
+!SESSION 2024-02-17 02:28:12.108 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-17 02:28:25.843
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:10.217
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:11.933
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:25.612
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:25.966
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:27.673
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:47.823
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:48.165
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:49.959
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:56.092
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:56.442
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-02-17 02:30:58.161
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/task65/task65.elf]
+!SESSION 2024-02-27 01:25:33.808 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-02-27 01:25:54.932
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-27 01:26:46.501
+!MESSAGE Indexed 'task7_bsp' (83 sources, 64 headers) in 1.14 sec: 1,222 declarations; 2,687 references; 113 unresolved inclusions; 6 syntax errors; 195 unresolved names (4.8%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-27 01:26:49.027
+!MESSAGE Indexed 'task7' (1 sources, 0 headers) in 0.004 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2024-03-05 20:32:56.097 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-03-05 20:33:34.006
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more

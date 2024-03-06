@@ -1,0 +1,6 @@
+01:26:49 **** Clean-only build of configuration Nios II for project task7 ****
+make clean 
+[task7 clean complete]
+
+01:26:49 Build Finished (took 315ms)
+

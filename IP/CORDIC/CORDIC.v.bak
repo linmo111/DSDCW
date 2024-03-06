@@ -1,0 +1,35 @@
+// CORDIC parameters
+localparam M = 14; // No. of iterations
+localparam W = 32; // Bit width
+
+// Interface
+
+module cordic_cos(
+input [W-1:0] x,
+output [W-1:0] y
+);
+
+// Signals
+
+wire [W-1:0] zi [0:M]; // Pipeline registers
+wire [W-1:M] di; // M-bit direction vector
+
+// CORDIC rotations
+generate
+genvar i;
+for(i=0; i<M; i=i+1) begin : stages
+assign zi[i+1] = zi[i] - (di[i] << i) ;
+end
+
+endgenerate
+
+// Assign output
+assign y = zi[M];
+
+// Initial values
+
+assign zi[0] = {1'b1, {(W-1){1'b0}}};
+
+assign di = x[W-1:W-M]; // MSBs of x
+
+endmodule
