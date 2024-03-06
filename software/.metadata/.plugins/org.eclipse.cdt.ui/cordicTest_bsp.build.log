@@ -1,0 +1,6 @@
+01:22:01 **** Clean-only build of configuration Nios II for project cordicTest_bsp ****
+make clean 
+[BSP clean complete]
+
+01:22:01 Build Finished (took 861ms)
+

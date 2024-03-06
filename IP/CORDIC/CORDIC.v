@@ -14,7 +14,7 @@ module CORDIC #(
 
 	)(
 	input [W-1:0] dataa, //this input is float 
-	input [W-1:0] datab, 
+//	input [W-1:0] datab, 
 	input clk,
 	input rst,
 //	input clk_en,
@@ -123,12 +123,14 @@ initial begin
 end
 
 //conversion
+//wire [31:0] tt;
 wire [7:0] exp;
 //wire [W-10:0] manti;
 wire sign;
  assign exp = dataa[30:23];
 // assign manti = dataa[22:0]; 
- assign sign= dataa[31];
+ assign sign= 1'b0;//cos is symmetric anyways
+ 
  wire [23:0] fixed_mantissa;
  assign fixed_mantissa= {1'b1, dataa[22:0]};
  reg signed [7:0] shift_amount;

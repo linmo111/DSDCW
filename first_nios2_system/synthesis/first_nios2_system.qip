@@ -2,7 +2,7 @@ set_global_assignment -entity "first_nios2_system" -library "first_nios2_system"
 set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_TOOL_VERSION "18.1"
 set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "first_nios2_system" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../first_nios2_system.sopcinfo"]
-set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name SLD_INFO "QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1708968042"
+set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name SLD_INFO "QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1709745261"
 set_global_assignment -library "first_nios2_system" -name MISC_FILE [file join $::quartus(qip_path) "../first_nios2_system.cmp"]
 set_global_assignment -library "first_nios2_system" -name SLD_FILE [file join $::quartus(qip_path) "first_nios2_system.regmap"]
 set_global_assignment -library "first_nios2_system" -name SLD_FILE [file join $::quartus(qip_path) "first_nios2_system.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "first_nios2_system" -library "first_nios2_system"
 set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTcwODk2ODA0Mg==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTcwOTc0NTI2MQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "first_nios2_system" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -845,7 +845,7 @@ set_global_assignment -entity "altera_customins_slave_translator" -library "firs
 set_global_assignment -entity "altera_customins_slave_translator" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "RU5BQkxFX01VTFRJQ1lDTEU=::MQ==::RU5BQkxFX01VTFRJQ1lDTEU="
 set_global_assignment -entity "altera_customins_slave_translator" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "VVNFX1NUQVJU::MA==::VVNFX1NUQVJU"
 set_global_assignment -entity "altera_customins_slave_translator" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "VVNFX0RPTkU=::MA==::VVNFX0RPTkU="
-set_global_assignment -entity "altera_customins_slave_translator" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "TlVNX0ZJWEVEX0NZQ0xFUw==::MA==::TlVNX0ZJWEVEX0NZQ0xFUw=="
+set_global_assignment -entity "altera_customins_slave_translator" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "TlVNX0ZJWEVEX0NZQ0xFUw==::MjE=::TlVNX0ZJWEVEX0NZQ0xFUw=="
 set_global_assignment -entity "first_nios2_system_cpu_custom_instruction_master_multi_xconnect" -library "first_nios2_system" -name IP_COMPONENT_NAME "Zmlyc3RfbmlvczJfc3lzdGVtX2NwdV9jdXN0b21faW5zdHJ1Y3Rpb25fbWFzdGVyX211bHRpX3hjb25uZWN0"
 set_global_assignment -entity "first_nios2_system_cpu_custom_instruction_master_multi_xconnect" -library "first_nios2_system" -name IP_COMPONENT_DISPLAY_NAME "Q3VzdG9tIEluc3RydWN0aW9uIEludGVyY29ubmVjdA=="
 set_global_assignment -entity "first_nios2_system_cpu_custom_instruction_master_multi_xconnect" -library "first_nios2_system" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -1335,8 +1335,12 @@ set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_CO
 set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
 set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "TQ==::MTg=::TQ=="
+set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "TQ==::MjA=::TQ=="
 set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "Vw==::MzI=::Vw=="
+set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "RVhPTkVOVF9CSVRT::OA==::RVhPTkVOVF9CSVRT"
+set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "TUFOVElTU0FfQklUUw==::MjM=::TUFOVElTU0FfQklUUw=="
+set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "SU5URUdFUl9CSVRT::Mg==::SU5URUdFUl9CSVRT"
+set_global_assignment -entity "CORDIC" -library "first_nios2_system" -name IP_COMPONENT_PARAMETER "RlJBQ1RJT05fQklUUw==::MzA=::RlJBQ1RJT05fQklUUw=="
 
 set_global_assignment -library "first_nios2_system" -name VERILOG_FILE [file join $::quartus(qip_path) "first_nios2_system.v"]
 set_global_assignment -library "first_nios2_system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]

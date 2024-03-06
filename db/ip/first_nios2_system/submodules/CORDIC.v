@@ -5,7 +5,7 @@
 // Interface
 
 module CORDIC #(
-	parameter M =16,
+	parameter M =20,
 	parameter W=32,
 	parameter EXONENT_BITS = 8,
 	parameter MANTISSA_BITS = 23,
@@ -16,7 +16,7 @@ module CORDIC #(
 	input [W-1:0] dataa, //this input is float 
 	input [W-1:0] datab, 
 	input clk,
-//	input rst,
+	input rst,
 //	input clk_en,
 	
 	output reg [W-1:0] result, //output should also be float
@@ -105,6 +105,11 @@ initial begin
 	e[13]=32'b00000000000000011111111111111111;
 	e[14]=32'b00000000000000001111111111111111;
 	e[15]=32'b00000000000000000111111111111111;
+	e[16]=32'b00000000000000000011111111111111;
+	e[17]=32'b00000000000000000001111111111111;
+	e[18]=32'b00000000000000000000111111111111;
+	e[19]=32'b00000000000000000000011111111111;
+//	e[15]=32'b00000000000000000111111111111111;
 //	e[11]=32'b00111001111111111111111111010101;
 //	e[12]=32'b00111001011111111111111111010101;
 //	e[13]=32'b00111000111111111111111111010101;
@@ -123,7 +128,7 @@ wire [7:0] exp;
 wire sign;
  assign exp = dataa[30:23];
 // assign manti = dataa[22:0]; 
- assign sign= dataa[31];
+ assign sign= 1'b0;//cos is symmetric anyways
  wire [23:0] fixed_mantissa;
  assign fixed_mantissa= {1'b1, dataa[22:0]};
  reg signed [7:0] shift_amount;
@@ -208,16 +213,22 @@ wire sign;
 	// CORDIC rotations
 	
 	always @(posedge clk) begin
-		x[0]=32'b00100110110111010011101101101010;
-		y[0]=0;
-		z[0] = fixed_in;
-//		di[0]=fixed_in[W-1:W-M];
-	
+		if (rst)	begin
+			x[0]<=0;
+			y[0]<=0;
+			z[0]<=0;
+		end
+		else begin
+			x[0]<=32'b00100110110111010011101101101010;
+			y[0]<=0;
+			z[0]<= fixed_in;
+	//		di[0]=fixed_in[W-1:W-M];
+		end
 	end
 	
-	
-	generate
 	genvar i;
+	generate
+	
 	for(i=0; i<M-1; i=i+1) begin : stages
 		
 	
@@ -226,16 +237,16 @@ wire sign;
 //				if (clk_en) begin
 					
 				if (z[i][31]==0) begin
-					x[i+1]=x[i]- (y[i]>>>i) ;
-					y[i+1]=y[i]+ (x[i]>>>i) ;
-					z[i+1] =z[i]- (e[i]) ;
+					x[i+1]<=x[i]- (y[i]>>>i) ;
+					y[i+1]<=y[i]+ (x[i]>>>i) ;
+					z[i+1]<=z[i]- (e[i]) ;
 //					di[i+1]=di[i];
 				end
 				else begin
 									
-					x[i+1]=x[i]+ (y[i]>>>i) ;
-					y[i+1]=y[i]- (x[i]>>>i) ;
-					z[i+1] =z[i]+ (e[i]) ;
+					x[i+1]<=x[i]+ (y[i]>>>i) ;
+					y[i+1]<=y[i]- (x[i]>>>i) ;
+					z[i+1]<=z[i]+ (e[i]) ;
 				
 				end
 			

@@ -3,7 +3,7 @@ module tb ();
 
 	//Inputs to DUT are reg type
 	reg [31:0] dataa;
-	reg [31:0] datab; 
+//	reg [31:0] datab; 
 	reg clk;
 	reg rst;
 	//Output from DUT is wire type
@@ -51,17 +51,18 @@ module tb ();
 		@(posedge clk); 
 		rst<=0;
 		// set dataa and datab
-		dataa <= 32'b00111111000001100000101010010010;
-		datab <= 32'd2;
+		dataa <= 32'b10111111000001100000101010010010;
+//		datab <= 32'd2;
+		#20
+		dataa <= 32'b00111110100001100000101010010010;
+//		datab <= 32'd23;
 		
 		#20
 
-		dataa <= 32'b00111111010010010000111111011011;
-		datab <= 32'd22;
+		dataa <= 32'b00111111000001100000101010010010;
+//		datab <= 32'd22;
 //		
-		#20
-		dataa <= 32'b00111110100001100000101010010010;
-		datab <= 32'd23;
+		
 //		
 		#1000
 		$display($time, "<< Simulation Complete >>");

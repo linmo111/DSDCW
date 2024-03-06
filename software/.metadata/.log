@@ -1000,3 +1000,189 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
 	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
 	... 9 more
+!SESSION 2024-03-07 01:21:09.777 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/quartus18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-03-07 01:21:28.023
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-07 01:22:01.985
+!MESSAGE Indexed 'cordicTest_bsp' (83 sources, 64 headers) in 1.31 sec: 1,222 declarations; 2,687 references; 113 unresolved inclusions; 6 syntax errors; 195 unresolved names (4.8%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-07 01:22:04.657
+!MESSAGE Indexed 'cordicTest' (1 sources, 0 headers) in 0.003 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:27:23.535
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1001030 --timestamp=1709745298]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:27:25.144
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1001030 --timestamp=1709745298 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordicTest/cordicTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:30:53.797
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:30:54.105
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1001030 --timestamp=1709745298]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:30:55.752
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1001030 --timestamp=1709745298 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordicTest/cordicTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:31:47.758
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:31:48.060
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1001030 --timestamp=1709745298]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:31:49.627
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1001030 --timestamp=1709745298 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordicTest/cordicTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:46:59.870
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:47:00.470
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1001030 --timestamp=1709745298]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:47:02.460
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1001030 --timestamp=1709745298 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordicTest/cordicTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:47:40.729
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:47:41.353
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1001030 --timestamp=1709745298]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:47:43.216
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1001030 --timestamp=1709745298 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordicTest/cordicTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:49:21.537
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:49:22.271
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1001030 --timestamp=1709745298]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:49:24.259
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1001030 --timestamp=1709745298 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordicTest/cordicTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 01:59:59.707
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:00:00.316
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1001030 --timestamp=1709745298]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:00:02.365
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1001030 --timestamp=1709745298 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordicTest/cordicTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:00:15.289
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:00:15.903
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1001030 --timestamp=1709745298]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:00:18.076
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x1001030 --timestamp=1709745298]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:00:18.079
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1001030 --timestamp=1709745298 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordicTest/cordicTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:00:19.999
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x1001030 --timestamp=1709745298 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordicTest/cordicTest.elf]
+
+!ENTRY org.eclipse.debug.ui 4 120 2024-03-07 02:00:23.186
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-07 02:00:56.167
+!MESSAGE Indexed 'cordictest2_bsp' (83 sources, 157 headers) in 1.75 sec: 5,453 declarations; 8,818 references; 17 unresolved inclusions; 2 syntax errors; 51 unresolved names (0.36%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-07 02:00:56.665
+!MESSAGE Indexed 'cordictest2' (1 sources, 21 headers) in 0.071 sec: 983 declarations; 1,599 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:03:47.833
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:03:47.835
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:03:48.462
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:03:50.384
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2/cordictest2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:05:07.226
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:05:07.855
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:05:09.836
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2/cordictest2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:06:05.695
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:06:06.329
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:06:08.176
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2/cordictest2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:11:03.471
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:11:04.209
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:11:06.011
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2/cordictest2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:11:17.583
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:11:18.199
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:11:20.126
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2/cordictest2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:20:26.540
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:20:28.012
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2/cordictest2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:20:37.996
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:20:38.407
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --accept-bad-sysid --sidp=0x1001030]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-03-07 02:20:40.135
+!MESSAGE Executing: [D:/quartus18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --accept-bad-sysid --sidp=0x1001030 /cygdrive/c/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2/cordictest2.elf]

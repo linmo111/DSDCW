@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2024.03.05.20:35:00 -->
+ <!-- 2024.03.07.01:56:45 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1709642100</value>
+  <value>1709747804</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -438,7 +438,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="M">
    <type>int</type>
-   <value>18</value>
+   <value>20</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -525,7 +525,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockCycle">
     <type>int</type>
-    <value>17</value>
+    <value>21</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -565,7 +565,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="operands">
     <type>int</type>
-    <value>2</value>
+    <value>1</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -608,10 +608,10 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
    <port>
-    <name>datab</name>
+    <name>rst</name>
     <direction>Input</direction>
-    <width>32</width>
-    <role>datab</role>
+    <width>1</width>
+    <role>reset</role>
    </port>
   </interface>
  </module>
@@ -7241,7 +7241,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1709642100</value>
+   <value>1709747804</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -7261,7 +7261,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1709642100</value>
+   <value>1709747804</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -7277,7 +7277,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1709642100</value>
+   <value>1709747804</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="first_nios2_system" kind="system" version="18.1" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2024.02.27.01:20:58 -->
+ <!-- 2024.03.07.01:14:39 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1708968042</value>
+  <value>1709745261</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -510,7 +510,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="M">
    <type>int</type>
-   <value>18</value>
+   <value>20</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -519,6 +519,38 @@ the requested settings for a module instance. -->
   <parameter name="W">
    <type>int</type>
    <value>32</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="EXONENT_BITS">
+   <type>int</type>
+   <value>8</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="MANTISSA_BITS">
+   <type>int</type>
+   <value>23</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="INTEGER_BITS">
+   <type>int</type>
+   <value>2</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="FRACTION_BITS">
+   <type>int</type>
+   <value>30</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -565,7 +597,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockCycle">
     <type>int</type>
-    <value>0</value>
+    <value>21</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -605,7 +637,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="operands">
     <type>int</type>
-    <value>2</value>
+    <value>1</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -636,12 +668,6 @@ parameters are a RESULT of the module parameters. -->
     <role>dataa</role>
    </port>
    <port>
-    <name>clk_en</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>clk_en</role>
-   </port>
-   <port>
     <name>result</name>
     <direction>Output</direction>
     <width>32</width>
@@ -652,6 +678,12 @@ parameters are a RESULT of the module parameters. -->
     <direction>Input</direction>
     <width>1</width>
     <role>clk</role>
+   </port>
+   <port>
+    <name>rst</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>reset</role>
    </port>
   </interface>
  </module>
@@ -7226,7 +7258,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1708968042</value>
+   <value>1709745261</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -7246,7 +7278,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1708968042</value>
+   <value>1709745261</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -7262,7 +7294,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1708968042</value>
+   <value>1709745261</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -8920,7 +8952,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="NUM_FIXED_CYCLES">
    <type>int</type>
-   <value>0</value>
+   <value>21</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14836,5 +14868,5 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <reportVersion>18.1 625</reportVersion>
- <uniqueIdentifier>CE1531BDC7C50000018DE66EE6E3</uniqueIdentifier>
+ <uniqueIdentifier>CE1531BDC7C50000018E14C2558B</uniqueIdentifier>
 </EnsembleReport>

@@ -228,10 +228,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "fixedpoint_in[31]",
-					"strict" : false
-				},
-				{
 					"name" : "fixedpoint_out[0]",
 					"strict" : false
 				},
@@ -481,10 +477,6 @@
 				},
 				{
 					"name" : "dataa[0]",
-					"strict" : false
-				},
-				{
-					"name" : "dataa[31]",
 					"strict" : false
 				},
 				{

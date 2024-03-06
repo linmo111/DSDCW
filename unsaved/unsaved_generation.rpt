@@ -4,6 +4,8 @@ Progress: Loading system_template_de1_soc/unsaved.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
+Progress: Adding cordic_0 [cordic 1.0]
+Progress: Parameterizing module cordic_0
 Progress: Adding cpu [altera_nios2_gen2 18.1]
 Progress: Parameterizing module cpu
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
@@ -32,6 +34,8 @@ Progress: Loading system_template_de1_soc/unsaved.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
+Progress: Adding cordic_0 [cordic 1.0]
+Progress: Parameterizing module cordic_0
 Progress: Adding cpu [altera_nios2_gen2 18.1]
 Progress: Parameterizing module cpu
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
@@ -52,24 +56,32 @@ Info: unsaved.jtag_uart: JTAG UART IP input clock need to be at least double (2x
 Info: unsaved.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
 Info: unsaved.sysid: Time stamp will be automatically updated when this component is generated.
 Info: unsaved: Generating unsaved "unsaved" for QUARTUS_SYNTH
+Warning: unsaved: "No matching role found for cpu_custom_instruction_master_translator:ci_slave:ci_slave_result (result)"
+Warning: unsaved: "No matching role found for cpu_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: unsaved: "No matching role found for cpu_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning: unsaved: "No matching role found for cpu_custom_instruction_master_multi_slave_translator0:ci_master:ci_master_clken (clk_en)"
+Info: cordic_0: "unsaved" instantiated cordic "cordic_0"
 Info: cpu: "unsaved" instantiated altera_nios2_gen2 "cpu"
 Info: jtag_uart: Starting RTL generation for module 'unsaved_jtag_uart'
-Info: jtag_uart:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=unsaved_jtag_uart --dir=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0029_jtag_uart_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0029_jtag_uart_gen//unsaved_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=unsaved_jtag_uart --dir=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0004_jtag_uart_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0004_jtag_uart_gen//unsaved_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'unsaved_jtag_uart'
 Info: jtag_uart: "unsaved" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: led_pio: Starting RTL generation for module 'unsaved_led_pio'
-Info: led_pio:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=unsaved_led_pio --dir=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0030_led_pio_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0030_led_pio_gen//unsaved_led_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=unsaved_led_pio --dir=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0005_led_pio_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0005_led_pio_gen//unsaved_led_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: led_pio: Done RTL generation for module 'unsaved_led_pio'
 Info: led_pio: "unsaved" instantiated altera_avalon_pio "led_pio"
 Info: onchip_mem: Starting RTL generation for module 'unsaved_onchip_mem'
-Info: onchip_mem:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=unsaved_onchip_mem --dir=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0031_onchip_mem_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0031_onchip_mem_gen//unsaved_onchip_mem_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_mem:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=unsaved_onchip_mem --dir=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0006_onchip_mem_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0006_onchip_mem_gen//unsaved_onchip_mem_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_mem: Done RTL generation for module 'unsaved_onchip_mem'
 Info: onchip_mem: "unsaved" instantiated altera_avalon_onchip_memory2 "onchip_mem"
 Info: sys_clk_timer: Starting RTL generation for module 'unsaved_sys_clk_timer'
-Info: sys_clk_timer:   Generation command is [exec D:/quartus18.1/quartus/bin64//perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64//perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=unsaved_sys_clk_timer --dir=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0032_sys_clk_timer_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0032_sys_clk_timer_gen//unsaved_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: sys_clk_timer:   Generation command is [exec D:/quartus18.1/quartus/bin64//perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64//perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=unsaved_sys_clk_timer --dir=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0007_sys_clk_timer_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0007_sys_clk_timer_gen//unsaved_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]
 Info: sys_clk_timer: Done RTL generation for module 'unsaved_sys_clk_timer'
 Info: sys_clk_timer: "unsaved" instantiated altera_avalon_timer "sys_clk_timer"
 Info: sysid: "unsaved" instantiated altera_avalon_sysid_qsys "sysid"
+Info: cpu_custom_instruction_master_translator: "unsaved" instantiated altera_customins_master_translator "cpu_custom_instruction_master_translator"
+Info: cpu_custom_instruction_master_multi_xconnect: "unsaved" instantiated altera_customins_xconnect "cpu_custom_instruction_master_multi_xconnect"
+Info: cpu_custom_instruction_master_multi_slave_translator0: "unsaved" instantiated altera_customins_slave_translator "cpu_custom_instruction_master_multi_slave_translator0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
@@ -80,31 +92,31 @@ Info: mm_interconnect_0: "unsaved" instantiated altera_mm_interconnect "mm_inter
 Info: irq_mapper: "unsaved" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "unsaved" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'unsaved_cpu_cpu'
-Info: cpu:   Generation command is [exec D:/quartus18.1/quartus/bin64//eperlcmd.exe -I D:/quartus18.1/quartus/bin64//perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=unsaved_cpu_cpu --dir=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0036_cpu_gen/ --quartus_bindir=D:/quartus18.1/quartus/bin64/ --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9787_1843147179390576371.dir/0036_cpu_gen//unsaved_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2024.03.05 20:33:02 (*) Starting Nios II generation
-Info: cpu: # 2024.03.05 20:33:02 (*)   Checking for plaintext license.
-Info: cpu: # 2024.03.05 20:33:02 (*)   Couldn't query license setup in Quartus directory D:/quartus18.1/quartus/bin64/
-Info: cpu: # 2024.03.05 20:33:02 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2024.03.05 20:33:02 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2024.03.05 20:33:02 (*)   Plaintext license not found.
-Info: cpu: # 2024.03.05 20:33:02 (*)   Checking for encrypted license (non-evaluation).
-Info: cpu: # 2024.03.05 20:33:03 (*)   Couldn't query license setup in Quartus directory D:/quartus18.1/quartus/bin64/
-Info: cpu: # 2024.03.05 20:33:03 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2024.03.05 20:33:03 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2024.03.05 20:33:03 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
-Info: cpu: # 2024.03.05 20:33:03 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2024.03.05 20:33:03 (*)   Creating all objects for CPU
-Info: cpu: # 2024.03.05 20:33:03 (*)     Testbench
-Info: cpu: # 2024.03.05 20:33:03 (*)     Instruction decoding
-Info: cpu: # 2024.03.05 20:33:03 (*)       Instruction fields
-Info: cpu: # 2024.03.05 20:33:03 (*)       Instruction decodes
-Info: cpu: # 2024.03.05 20:33:03 (*)       Signals for RTL simulation waveforms
-Info: cpu: # 2024.03.05 20:33:03 (*)       Instruction controls
-Info: cpu: # 2024.03.05 20:33:03 (*)     Pipeline frontend
-Info: cpu: # 2024.03.05 20:33:03 (*)     Pipeline backend
-Info: cpu: # 2024.03.05 20:33:05 (*)   Generating RTL from CPU objects
-Info: cpu: # 2024.03.05 20:33:07 (*)   Creating encrypted RTL
-Info: cpu: # 2024.03.05 20:33:07 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec D:/quartus18.1/quartus/bin64//eperlcmd.exe -I D:/quartus18.1/quartus/bin64//perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=unsaved_cpu_cpu --dir=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0014_cpu_gen/ --quartus_bindir=D:/quartus18.1/quartus/bin64/ --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9788_944284616060405117.dir/0014_cpu_gen//unsaved_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2024.03.07 01:09:03 (*) Starting Nios II generation
+Info: cpu: # 2024.03.07 01:09:03 (*)   Checking for plaintext license.
+Info: cpu: # 2024.03.07 01:09:04 (*)   Couldn't query license setup in Quartus directory D:/quartus18.1/quartus/bin64/
+Info: cpu: # 2024.03.07 01:09:04 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2024.03.07 01:09:04 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2024.03.07 01:09:04 (*)   Plaintext license not found.
+Info: cpu: # 2024.03.07 01:09:04 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2024.03.07 01:09:04 (*)   Couldn't query license setup in Quartus directory D:/quartus18.1/quartus/bin64/
+Info: cpu: # 2024.03.07 01:09:04 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2024.03.07 01:09:04 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2024.03.07 01:09:04 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2024.03.07 01:09:04 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.03.07 01:09:04 (*)   Creating all objects for CPU
+Info: cpu: # 2024.03.07 01:09:04 (*)     Testbench
+Info: cpu: # 2024.03.07 01:09:04 (*)     Instruction decoding
+Info: cpu: # 2024.03.07 01:09:04 (*)       Instruction fields
+Info: cpu: # 2024.03.07 01:09:04 (*)       Instruction decodes
+Info: cpu: # 2024.03.07 01:09:05 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2024.03.07 01:09:05 (*)       Instruction controls
+Info: cpu: # 2024.03.07 01:09:05 (*)     Pipeline frontend
+Info: cpu: # 2024.03.07 01:09:05 (*)     Pipeline backend
+Info: cpu: # 2024.03.07 01:09:06 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.03.07 01:09:07 (*)   Creating encrypted RTL
+Info: cpu: # 2024.03.07 01:09:08 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'unsaved_cpu_cpu'
 Info: cpu: "cpu" instantiated altera_nios2_gen2_unit "cpu"
 Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
@@ -131,6 +143,6 @@ Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "r
 Info: Reusing file C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/unsaved/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: unsaved: Done "unsaved" with 31 modules, 50 files
+Info: unsaved: Done "unsaved" with 35 modules, 54 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

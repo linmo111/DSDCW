@@ -1,0 +1,18 @@
+02:20:36 **** Incremental Build of configuration Nios II for project cordictest2 ****
+make all 
+Info: Building ../cordictest2_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../cordictest2_bsp//HAL/inc -I../cordictest2_bsp/ -I../cordictest2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking cordictest2.elf
+nios2-elf-g++  -T'../cordictest2_bsp//linker.x' -msys-crt0='../cordictest2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cordictest2_bsp/   -Wl,-Map=cordictest2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o cordictest2.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1709747804 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
+Info: (cordictest2.elf) 70 KBytes program size (code + initialized data).
+Info:                   8115 KBytes free for stack + heap.
+Info: Creating cordictest2.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source cordictest2.elf >cordictest2.objdump
+[cordictest2 build complete]
+
+02:20:37 Build Finished (took 1s.513ms)
+

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Mar 05 20:37:33 2024
+Fitter Status : Successful - Thu Mar 07 01:59:06 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : hello_world
 Top-level Entity Name : hello_world
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 2,640 / 32,070 ( 8 % )
-Total registers : 4304
+Logic utilization (in ALMs) : 2,794 / 32,070 ( 9 % )
+Total registers : 4563
 Total pins : 47 / 457 ( 10 % )
 Total virtual pins : 0
 Total block memory bits : 91,552 / 4,065,280 ( 2 % )

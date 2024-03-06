@@ -212,6 +212,7 @@ wire             W_op_cmpltu;
 wire             W_op_cmpltui;
 wire             W_op_cmpne;
 wire             W_op_cmpnei;
+wire             W_op_cordic_0;
 wire             W_op_crst;
 wire             W_op_custom;
 wire             W_op_div;
@@ -445,6 +446,7 @@ wire             test_has_ended;
   assign W_op_intr = (W_iw_opx == 61) & W_is_opx_inst;
   assign W_op_crst = (W_iw_opx == 62) & W_is_opx_inst;
   assign W_op_opx_rsv63 = (W_iw_opx == 63) & W_is_opx_inst;
+  assign W_op_cordic_0 = W_op_custom & 1'b1;
   assign W_is_opx_inst = W_iw_op == 58;
   always @(posedge clk or negedge reset_n)
     begin
