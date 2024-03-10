@@ -217,6 +217,14 @@
          type = "String";
       }
    }
+   element first_nios2_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
    element jtag_uart
    {
       datum _sortIndex
@@ -358,8 +366,8 @@
  </module>
  <module name="cordicMulti_0" kind="cordicMulti" version="1.0" enabled="1">
   <parameter name="EXONENT_BITS" value="8" />
-  <parameter name="FRACTION_BITS" value="24" />
-  <parameter name="FixedW" value="26" />
+  <parameter name="FRACTION_BITS" value="25" />
+  <parameter name="FixedW" value="27" />
   <parameter name="INTEGER_BITS" value="2" />
   <parameter name="M" value="22" />
   <parameter name="MANTISSA_BITS" value="23" />

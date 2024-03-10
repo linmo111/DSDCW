@@ -12,31 +12,35 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC {C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:58:25 on Mar 09,2024
+# Start time: 03:55:38 on Mar 11,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC" C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v 
 # -- Compiling module CORDIC
 # 
 # Top level modules:
 # 	CORDIC
-# End time: 05:58:25 on Mar 09,2024, Elapsed time: 0:00:00
+# End time: 03:55:38 on Mar 11,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC {C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/testbench_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:58:25 on Mar 09,2024
+# Start time: 03:55:38 on Mar 11,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC" C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/testbench_1.v 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 05:58:25 on Mar 09,2024, Elapsed time: 0:00:00
+# End time: 03:55:38 on Mar 11,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 05:58:25 on Mar 09,2024
+# Start time: 03:55:38 on Mar 11,2024
 # Loading work.tb
 # Loading work.CORDIC
+# ** Warning: (vsim-3015) C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/testbench_1.v(18): [PCDPC] - Port size (27) does not match connection size (26) for port 'fixedpoint_in'. The port definition is at: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v(24).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/unit File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v
+# ** Warning: (vsim-3015) C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/testbench_1.v(18): [PCDPC] - Port size (27) does not match connection size (26) for port 'fixedpoint_out'. The port definition is at: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/unit File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v
 # 
 # add wave *
 # view structure
@@ -49,5 +53,5 @@
 # ** Note: $stop    : C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/testbench_1.v(69)
 #    Time: 1070 ns  Iteration: 0  Instance: /tb
 # Break in Module tb at C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/testbench_1.v line 69
-# End time: 06:06:09 on Mar 09,2024, Elapsed time: 0:07:44
-# Errors: 0, Warnings: 0
+# End time: 04:31:06 on Mar 11,2024, Elapsed time: 0:35:28
+# Errors: 0, Warnings: 2

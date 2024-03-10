@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at CORDIC.v(257): always construct contains both blocking and non-blocking assignments File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 257
+Warning (10268): Verilog HDL information at CORDIC.v(251): always construct contains both blocking and non-blocking assignments File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 251

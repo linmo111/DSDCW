@@ -131,11 +131,11 @@ module first_nios2_system (
 	CORDIC #(
 		.M             (22),
 		.W             (32),
-		.FixedW        (26),
+		.FixedW        (27),
 		.EXONENT_BITS  (8),
 		.MANTISSA_BITS (23),
 		.INTEGER_BITS  (2),
-		.FRACTION_BITS (24)
+		.FRACTION_BITS (25)
 	) cordicmulti_0 (
 		.dataa  (cpu_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  // nios_custom_instruction_slave_1.dataa
 		.rst    (cpu_custom_instruction_master_multi_slave_translator0_ci_master_reset),  //                                .reset
@@ -357,7 +357,7 @@ module first_nios2_system (
 	altera_customins_slave_translator #(
 		.N_WIDTH          (8),
 		.USE_DONE         (0),
-		.NUM_FIXED_CYCLES (4)
+		.NUM_FIXED_CYCLES (5)
 	) cpu_custom_instruction_master_multi_slave_translator0 (
 		.ci_slave_dataa      (cpu_custom_instruction_master_multi_xconnect_ci_master0_dataa),          //  ci_slave.dataa
 		.ci_slave_datab      (cpu_custom_instruction_master_multi_xconnect_ci_master0_datab),          //          .datab

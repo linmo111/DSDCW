@@ -105,11 +105,11 @@ set_location_assignment PIN_AB13 -to oDRAM_DQM[0]
 
 set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
 set_global_assignment -name SEARCH_PATH "c:\\users\\rz01888\\desktop\\year_three\\dsd\\task1\\system_template_de1_soc\\system_template_de1_soc"
+set_global_assignment -name VERILOG_FILE IP/CORDIC/CORDIC.v
 set_global_assignment -name QIP_FILE IP/fixed_mul/lpm_1.qip
 set_global_assignment -name QIP_FILE IP/fp_sub/fp_subtractor.qip
 set_global_assignment -name QIP_FILE IP/fp_mul/fp_multiplier.qip
 set_global_assignment -name QIP_FILE IP/fp_add/fp_adder.qip
-set_global_assignment -name VERILOG_FILE IP/CORDIC/CORDIC.v
 set_global_assignment -name QSYS_FILE first_nios2_system.qsys
 set_global_assignment -name SOURCE_FILE hello_world.qsf
 set_global_assignment -name SDC_FILE hw_dev_tutorial.sdc

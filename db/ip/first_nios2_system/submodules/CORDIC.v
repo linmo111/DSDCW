@@ -7,11 +7,11 @@
 module CORDIC #(
 	parameter M =22,
 	parameter W=32,
-	parameter FixedW=26,
+	parameter FixedW=27,
 	parameter EXONENT_BITS = 8,
 	parameter MANTISSA_BITS = 23,
 	parameter INTEGER_BITS = 2,
-	parameter FRACTION_BITS = 24
+	parameter FRACTION_BITS = 25
 
 	)(
 	input [W-1:0] dataa, //this input is float 
@@ -105,30 +105,30 @@ module CORDIC #(
 
 initial begin
 
-	e[0]=26'b00110010010000111111011010;
-	e[1]=26'b00011101101011000110011100;
-	e[2]=26'b00001111101011011011101011;
-	e[3]=26'b00000111111101010110111010;
-	e[4]=26'b00000011111111101010101101;
+	e[0]=27'b001100100100001111110110100;
+	e[1]=27'b000111011010110001100111000;
+	e[2]=27'b000011111010110110111010110;
+	e[3]=27'b000001111111010101101110100;
+	e[4]=27'b000000111111111010101011010;
 	
-	e[5]=26'b00000001111111111101010101;
-	e[6]=26'b00000000111111111111101010;
-	e[7]=26'b00000000011111111111111101;
-	e[8]=26'b00000000001111111111111111;
-	e[9]=26'b00000000000111111111111111;
+	e[5]=27'b000000011111111111010101010;
+	e[6]=27'b000000001111111111111010100;
+	e[7]=27'b000000000111111111111111010;
+	e[8]=27'b000000000011111111111111101;
+	e[9]=27'b000000000001111111111111110;
 
-	e[10]=26'b00000000000011111111111111;
-	e[11]=26'b00000000000001111111111111;
-	e[12]=26'b00000000000000111111111111;
-	e[13]=26'b00000000000000011111111111;
-	e[14]=26'b00000000000000001111111111;
-	e[15]=26'b00000000000000000111111111;
-	e[16]=26'b00000000000000000011111111;
-	e[17]=26'b00000000000000000001111111;
-	e[18]=26'b00000000000000000000111111;
-	e[19]=26'b00000000000000000000011111;
-   e[20]=26'b00000000000000000000001111;
-   e[21]=26'b00000000000000000000000111;
+	e[10]=27'b000000000000111111111111111;
+	e[11]=27'b000000000000011111111111111;
+	e[12]=27'b000000000000001111111111111;
+	e[13]=27'b000000000000000111111111111;
+	e[14]=27'b000000000000000011111111111;
+	e[15]=27'b000000000000000001111111111;
+	e[16]=27'b000000000000000000111111111;
+	e[17]=27'b000000000000000000011111111;
+	e[18]=27'b000000000000000000001111111;
+	e[19]=27'b000000000000000000000111111;
+   e[20]=27'b000000000000000000000011111;
+   e[21]=27'b000000000000000000000001111;
 //	e[12]=32'b00111001011111111111111111010101;
 //	e[13]=32'b00111000111111111111111111010101;
 //	e[14]=32'b00111000011111111111111111010101;
@@ -167,19 +167,19 @@ wire sign;
   if (shift_amount >= 24) begin
 		// Shift left beyond the integer bits
 //		fixed_in = {sign, fixed_mantissa, 7'b0};
-		fixed_in = {sign, fixed_mantissa, 1'b0};
+		fixed_in = {sign, fixed_mantissa, 2'b0};
   end else if (shift_amount >= 0) begin
 		// Shift left within the integer bits
 //		fixed_in = {sign, fixed_mantissa << shift_amount, 7'b0};
-		fixed_in = {sign, fixed_mantissa << shift_amount, 1'b0};
+		fixed_in = {sign, fixed_mantissa << shift_amount, 2'b0};
   end else begin
 		// Shift right within the fractional bits
 		if (shift_amount >= -30) begin
 //			 fixed_in = {sign, fixed_mantissa >> -shift_amount,7'b0};
-			 fixed_in = {sign, fixed_mantissa >> -shift_amount,1'b0};
+			 fixed_in = {sign, fixed_mantissa >> -shift_amount,2'b0};
 		end else begin
 //			 fixed_in = {sign, 31'b0};
-			 fixed_in = {sign, 25'b0};
+			 fixed_in = {sign, 26'b0};
 		end
   end
   
@@ -199,12 +199,12 @@ wire sign;
  assign fixedpoint_out=x[M-1];
  always @(*) begin   //from fixed point to floating point output
     if (int_part == 0) begin
-            if (frac_part[23]) begin
+            if (frac_part[24]) begin
                 exponent = 127 - 1;
+                mantissa = frac_part[24:2]<<<1;
+            end else if (frac_part[23]) begin
+                exponent = 127 - 2;
                 mantissa = frac_part[23:1]<<<1;
-//            end else if (frac_part[22]) begin
-//                exponent = 127 - 2;
-//                mantissa = frac_part[22:0];
 //            end else if (frac_part[27]) begin
 //                exponent = 127 - 3;
 //                mantissa = frac_part[26:4];
@@ -221,12 +221,12 @@ wire sign;
 //                exponent = 127 - 7;
 //                mantissa = frac_part[22:0];
             end else begin
-                exponent = 127-2;
+                exponent = 127-3;
                 mantissa = frac_part[22:0]<<<1;
             end
         end else begin
             exponent = 127 + int_part;
-            mantissa = frac_part[23:1];
+            mantissa = frac_part[24:2];
         end
 	 
 	 
@@ -238,38 +238,33 @@ wire sign;
 	// CORDIC rotations
 	
 	always @(posedge clk) begin
-		if (rst)	begin
-			x[0]<=0;
-			y[0]<=0;
-			z[0]<=0;
-		end
-		else begin
-			x[0]<=26'b00100110110111010011101101;
+
+			x[0]<=27'b001001101101110100111011010;
 			y[0]<=0;
 			z[0]<= fixed_in;
-	//		di[0]=fixed_in[W-1:W-M];
-		end
+
 	end
 	
 	genvar i;
 	generate
-	for(i=0; i<M; i=i+11) begin : stages	
+	for(i=0; i<M; i=i+7) begin : stages	
 		always@ (posedge clk ) begin
 		
 //				if (clk_en) begin
-					
-				if (z[i][FixedW-1]==0) begin
-					x[i+1]=x[i]- (y[i]>>>i) ;
-					y[i+1]=y[i]+ (x[i]>>>i) ;
-					z[i+1]=z[i]- (e[i]) ;
+				if ((i+1)<M) begin
+					if (z[i][FixedW-1]==0) begin
+						x[i+1]=x[i]- (y[i]>>>i) ;
+						y[i+1]=y[i]+ (x[i]>>>i) ;
+						z[i+1]=z[i]- (e[i]) ;
 
-				end
-				else begin
-									
-					x[i+1]=x[i]+ (y[i]>>>i) ;
-					y[i+1]=y[i]- (x[i]>>>i) ;
-					z[i+1]=z[i]+ (e[i]) ;
-				
+					end
+					else begin
+										
+						x[i+1]=x[i]+ (y[i]>>>i) ;
+						y[i+1]=y[i]- (x[i]>>>i) ;
+						z[i+1]=z[i]+ (e[i]) ;
+					
+					end
 				end
 				if ((i+2)<M) begin
 					if (z[i+1][FixedW-1]==0) begin
@@ -340,70 +335,70 @@ wire sign;
 				end
 				if ((i+7)<M) begin
 					if (z[i+6][FixedW-1]==0) begin
-						x[i+7]=x[i+6]- (y[i+6]>>>i+6) ;
-						y[i+7]=y[i+6]+ (x[i+6]>>>i+6) ;
-						z[i+7]=z[i+6]- (e[i+6]) ;
+						x[i+7]<=x[i+6]- (y[i+6]>>>i+6) ;
+						y[i+7]<=y[i+6]+ (x[i+6]>>>i+6) ;
+						z[i+7]<=z[i+6]- (e[i+6]) ;
 					end
 					else begin
 										
-						x[i+7]=x[i+6]+ (y[i+6]>>>i+6) ;
-						y[i+7]=y[i+6]- (x[i+6]>>>i+6) ;
-						z[i+7]=z[i+6]+ (e[i+6]) ;			
+						x[i+7]<=x[i+6]+ (y[i+6]>>>i+6) ;
+						y[i+7]<=y[i+6]- (x[i+6]>>>i+6) ;
+						z[i+7]<=z[i+6]+ (e[i+6]) ;			
 					end
 				end
-				if ((i+8)<M) begin
-					if (z[i+7][FixedW-1]==0) begin
-						x[i+8]=x[i+7]- (y[i+7]>>>i+7) ;
-						y[i+8]=y[i+7]+ (x[i+7]>>>i+7) ;
-						z[i+8]=z[i+7]- (e[i+7]) ;
-					end
-					else begin
-										
-						x[i+8]=x[i+7]+ (y[i+7]>>>i+7) ;
-						y[i+8]=y[i+7]- (x[i+7]>>>i+7) ;
-						z[i+8]=z[i+7]+ (e[i+7]) ;			
-					end
-				end
-				if ((i+9)<M) begin
-					if (z[i+8][FixedW-1]==0) begin
-						x[i+9]=x[i+8]- (y[i+8]>>>i+8) ;
-						y[i+9]=y[i+8]+ (x[i+8]>>>i+8) ;
-						z[i+9]=z[i+8]- (e[i+8]) ;
-					end
-					else begin
-										
-						x[i+9]=x[i+8]+ (y[i+8]>>>i+8) ;
-						y[i+9]=y[i+8]- (x[i+8]>>>i+8) ;
-						z[i+9]=z[i+8]+ (e[i+8]) ;			
-					end
-				end
-				if ((i+10)<M) begin
-					if (z[i+9][FixedW-1]==0) begin
-						x[i+10]=x[i+9]- (y[i+9]>>>i+9) ;
-						y[i+10]=y[i+9]+ (x[i+9]>>>i+9) ;
-						z[i+10]=z[i+9]- (e[i+9]) ;
-					end
-					else begin
-										
-						x[i+10]=x[i+9]+ (y[i+9]>>>i+9) ;
-						y[i+10]=y[i+9]- (x[i+9]>>>i+9) ;
-						z[i+10]=z[i+9]+ (e[i+9]) ;			
-					end
-				end
-								if ((i+11)<M) begin
-					if (z[i+10][FixedW-1]==0) begin
-						x[i+11]<=x[i+10]- (y[i+10]>>>i+10) ;
-						y[i+11]<=y[i+10]+ (x[i+10]>>>i+10) ;
-						z[i+11]<=z[i+10]- (e[i+10]) ;
-					end
-					else begin
-										
-						x[i+11]<=x[i+10]+ (y[i+10]>>>i+10) ;
-						y[i+11]<=y[i+10]- (x[i+10]>>>i+10) ;
-						z[i+11]<=z[i+10]+ (e[i+10]) ;			
-					end
-				end
-				
+//				if ((i+8)<M) begin
+//					if (z[i+7][FixedW-1]==0) begin
+//						x[i+8]<=x[i+7]- (y[i+7]>>>i+7) ;
+//						y[i+8]<=y[i+7]+ (x[i+7]>>>i+7) ;
+//						z[i+8]<=z[i+7]- (e[i+7]) ;
+//					end
+//					else begin
+//										
+//						x[i+8]<=x[i+7]+ (y[i+7]>>>i+7) ;
+//						y[i+8]<=y[i+7]- (x[i+7]>>>i+7) ;
+//						z[i+8]<=z[i+7]+ (e[i+7]) ;			
+//					end
+//				end
+//				if ((i+9)<M) begin
+//					if (z[i+8][FixedW-1]==0) begin
+//						x[i+9]<=x[i+8]- (y[i+8]>>>i+8) ;
+//						y[i+9]<=y[i+8]+ (x[i+8]>>>i+8) ;
+//						z[i+9]<=z[i+8]- (e[i+8]) ;
+//					end
+//					else begin
+//										
+//						x[i+9]<=x[i+8]+ (y[i+8]>>>i+8) ;
+//						y[i+9]<=y[i+8]- (x[i+8]>>>i+8) ;
+//						z[i+9]<=z[i+8]+ (e[i+8]) ;			
+//					end
+//				end
+//				if ((i+10)<M) begin
+//					if (z[i+9][FixedW-1]==0) begin
+//						x[i+10]=x[i+9]- (y[i+9]>>>i+9) ;
+//						y[i+10]=y[i+9]+ (x[i+9]>>>i+9) ;
+//						z[i+10]=z[i+9]- (e[i+9]) ;
+//					end
+//					else begin
+//										
+//						x[i+10]=x[i+9]+ (y[i+9]>>>i+9) ;
+//						y[i+10]=y[i+9]- (x[i+9]>>>i+9) ;
+//						z[i+10]=z[i+9]+ (e[i+9]) ;			
+//					end
+//				end
+//								if ((i+11)<M) begin
+//					if (z[i+10][FixedW-1]==0) begin
+//						x[i+11]<=x[i+10]- (y[i+10]>>>i+10) ;
+//						y[i+11]<=y[i+10]+ (x[i+10]>>>i+10) ;
+//						z[i+11]<=z[i+10]- (e[i+10]) ;
+//					end
+//					else begin
+//										
+//						x[i+11]<=x[i+10]+ (y[i+10]>>>i+10) ;
+//						y[i+11]<=y[i+10]- (x[i+10]>>>i+10) ;
+//						z[i+11]<=z[i+10]+ (e[i+10]) ;			
+//					end
+//				end
+//				
 			
 		end
 	
