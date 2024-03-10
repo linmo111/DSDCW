@@ -77,7 +77,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  29 .jdi          000058e3  00000000  00000000  0006d496  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     0003d8d3  00000000  00000000  00072d79  2**0
+ 30 .sopcinfo     0003d9e8  00000000  00000000  00072d79  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00800000 l    d  .entry	00000000 .entry
@@ -969,8 +969,8 @@ alt_after_alt_main:
 
 00800290 <main>:
 #include <math.h>
-#define ALT_CI_CORDIC_0(A) __builtin_custom_fnf(ALT_CI_CORDIC_0_N,(A))
-#define ALT_CI_CORDIC_0_N 0x0
+#define ALT_CI_CORDICMULTI_0(A) __builtin_custom_fnf(ALT_CI_CORDICMULTI_0_N,(A))
+#define ALT_CI_CORDICMULTI_0_N 0x0
 
 int main()
 {
@@ -978,14 +978,14 @@ int main()
   800294:	dfc00315 	stw	ra,12(sp)
   800298:	df000215 	stw	fp,8(sp)
   80029c:	df000204 	addi	fp,sp,8
- float cos1 = cos(-0.52359878);
-  8002a0:	008fd7b4 	movhi	r2,16222
-  8002a4:	10acf5c4 	addi	r2,r2,-19497
+ float cos1 = cos(-0.6);
+  8002a0:	008fd4f4 	movhi	r2,16211
+  8002a4:	10924c84 	addi	r2,r2,18738
   8002a8:	e0bffe15 	stw	r2,-8(fp)
 
- float cos2 = ALT_CI_CORDIC_0(-0.52359878);
-  8002ac:	00afc1b4 	movhi	r2,48902
-  8002b0:	1082a484 	addi	r2,r2,2706
+ float cos2 = ALT_CI_CORDICMULTI_0(-0.6);
+  8002ac:	00afc6b4 	movhi	r2,48922
+  8002b0:	10a66684 	addi	r2,r2,-26214
   8002b4:	1005c032 	custom	0,r2,r2,zero
   8002b8:	e0bfff15 	stw	r2,-4(fp)
 

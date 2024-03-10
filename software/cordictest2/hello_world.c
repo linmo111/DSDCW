@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <math.h>
-#define ALT_CI_CORDIC_0(A) __builtin_custom_fnf(ALT_CI_CORDIC_0_N,(A))
-#define ALT_CI_CORDIC_0_N 0x0
+#define ALT_CI_CORDICMULTI_0(A) __builtin_custom_fnf(ALT_CI_CORDICMULTI_0_N,(A))
+#define ALT_CI_CORDICMULTI_0_N 0x0
 
 int main()
 {
- float cos1 = cos(-0.52359878);
+ float cos1 = cos(-0.6);
 
- float cos2 = ALT_CI_CORDIC_0(-0.52359878);
+ float cos2 = ALT_CI_CORDICMULTI_0(-0.6);
 
  printf("Result: %f \n",cos1);
 

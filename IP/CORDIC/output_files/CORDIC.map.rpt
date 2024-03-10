@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CORDIC
-Thu Mar 07 02:19:37 2024
+Sat Mar 09 05:58:12 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,13 +14,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |CORDIC
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |CORDIC
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,14 +46,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Mar 07 02:19:37 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sat Mar 09 05:58:12 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CORDIC                                      ;
 ; Top-level Entity Name           ; CORDIC                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1585                                        ;
-; Total pins                      ; 130                                         ;
+; Total registers                 ; 129                                         ;
+; Total pins                      ; 118                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -186,25 +186,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1045      ;
+; Estimate of Logic utilization (ALMs needed) ; 966       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1922      ;
-;     -- 7 input functions                    ; 1         ;
-;     -- 6 input functions                    ; 166       ;
-;     -- 5 input functions                    ; 45        ;
-;     -- 4 input functions                    ; 18        ;
-;     -- <=3 input functions                  ; 1692      ;
+; Combinational ALUT usage for logic          ; 1794      ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 138       ;
+;     -- 5 input functions                    ; 61        ;
+;     -- 4 input functions                    ; 41        ;
+;     -- <=3 input functions                  ; 1554      ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 1585      ;
+; Dedicated logic registers                   ; 129       ;
 ;                                             ;           ;
-; I/O pins                                    ; 130       ;
+; I/O pins                                    ; 118       ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1585      ;
-; Total fan-out                               ; 10609     ;
-; Average fan-out                             ; 2.82      ;
+; Maximum fan-out                             ; 129       ;
+; Total fan-out                               ; 7118      ;
+; Average fan-out                             ; 3.30      ;
 +---------------------------------------------+-----------+
 
 
@@ -213,254 +213,71 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |CORDIC                    ; 1922 (1922)         ; 1585 (1585)               ; 0                 ; 0          ; 130  ; 0            ; |CORDIC             ; CORDIC      ; work         ;
+; |CORDIC                    ; 1794 (1794)         ; 129 (129)                 ; 0                 ; 0          ; 118  ; 0            ; |CORDIC             ; CORDIC      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; z[0][0]                                 ; Stuck at GND due to stuck port data_in ;
-; z[0][1]                                 ; Stuck at GND due to stuck port data_in ;
-; z[0][2]                                 ; Stuck at GND due to stuck port data_in ;
-; z[0][3]                                 ; Stuck at GND due to stuck port data_in ;
-; z[0][4]                                 ; Stuck at GND due to stuck port data_in ;
-; z[0][5]                                 ; Stuck at GND due to stuck port data_in ;
-; z[0][6]                                 ; Stuck at GND due to stuck port data_in ;
-; z[0][31]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][0]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][1]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][2]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][3]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][4]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][5]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][6]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][7]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][8]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][9]                                 ; Stuck at GND due to stuck port data_in ;
-; y[0][10]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][11]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][12]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][13]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][14]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][15]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][16]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][17]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][18]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][19]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][20]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][21]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][22]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][23]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][24]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][25]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][26]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][27]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][28]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][29]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][30]                                ; Stuck at GND due to stuck port data_in ;
-; y[0][31]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][0]                                 ; Stuck at GND due to stuck port data_in ;
-; x[0][2]                                 ; Stuck at GND due to stuck port data_in ;
-; x[0][4]                                 ; Stuck at GND due to stuck port data_in ;
-; x[0][7]                                 ; Stuck at GND due to stuck port data_in ;
-; x[0][10]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][14]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][15]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][17]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][21]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][24]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][27]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][28]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][30]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][31]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][0]                                 ; Stuck at GND due to stuck port data_in ;
-; y[1][2]                                 ; Stuck at GND due to stuck port data_in ;
-; y[1][4]                                 ; Stuck at GND due to stuck port data_in ;
-; y[1][7]                                 ; Stuck at GND due to stuck port data_in ;
-; y[1][10]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][14]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][15]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][17]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][21]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][24]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][27]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][28]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][30]                                ; Stuck at GND due to stuck port data_in ;
-; y[1][31]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][0]                                 ; Stuck at GND due to stuck port data_in ;
-; x[1][2]                                 ; Stuck at GND due to stuck port data_in ;
-; x[1][4]                                 ; Stuck at GND due to stuck port data_in ;
-; x[1][7]                                 ; Stuck at GND due to stuck port data_in ;
-; x[1][10]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][14]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][15]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][17]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][21]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][24]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][27]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][28]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][30]                                ; Stuck at GND due to stuck port data_in ;
-; x[1][31]                                ; Stuck at GND due to stuck port data_in ;
-; z[1][0]                                 ; Stuck at GND due to stuck port data_in ;
-; z[2][0]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[1][1]                                 ; Stuck at GND due to stuck port data_in ;
-; z[1][2]                                 ; Stuck at GND due to stuck port data_in ;
-; z[1][3]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[1][4]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[1][5]                                 ; Stuck at GND due to stuck port data_in ;
-; z[1][6]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[2][2]                                 ; Merged with z[2][1]                    ;
-; x[1][1]                                 ; Merged with y[1][1]                    ;
-; x[1][3]                                 ; Merged with y[1][3]                    ;
-; x[1][5]                                 ; Merged with y[1][5]                    ;
-; x[1][6]                                 ; Merged with y[1][6]                    ;
-; x[1][8]                                 ; Merged with y[1][8]                    ;
-; x[1][9]                                 ; Merged with y[1][9]                    ;
-; x[1][11]                                ; Merged with y[1][11]                   ;
-; x[1][12]                                ; Merged with y[1][12]                   ;
-; x[1][13]                                ; Merged with y[1][13]                   ;
-; x[1][16]                                ; Merged with y[1][16]                   ;
-; x[1][18]                                ; Merged with y[1][18]                   ;
-; x[1][19]                                ; Merged with y[1][19]                   ;
-; x[1][20]                                ; Merged with y[1][20]                   ;
-; x[1][22]                                ; Merged with y[1][22]                   ;
-; x[1][23]                                ; Merged with y[1][23]                   ;
-; x[1][25]                                ; Merged with y[1][25]                   ;
-; x[1][26]                                ; Merged with y[1][26]                   ;
-; x[1][29]                                ; Merged with y[1][29]                   ;
-; y[1][12]                                ; Merged with y[1][11]                   ;
-; y[1][13]                                ; Merged with y[1][11]                   ;
-; y[1][16]                                ; Merged with y[1][11]                   ;
-; y[1][18]                                ; Merged with y[1][11]                   ;
-; y[1][19]                                ; Merged with y[1][11]                   ;
-; y[1][1]                                 ; Merged with y[1][11]                   ;
-; y[1][20]                                ; Merged with y[1][11]                   ;
-; y[1][22]                                ; Merged with y[1][11]                   ;
-; y[1][23]                                ; Merged with y[1][11]                   ;
-; y[1][25]                                ; Merged with y[1][11]                   ;
-; y[1][26]                                ; Merged with y[1][11]                   ;
-; y[1][29]                                ; Merged with y[1][11]                   ;
-; y[1][3]                                 ; Merged with y[1][11]                   ;
-; y[1][5]                                 ; Merged with y[1][11]                   ;
-; y[1][6]                                 ; Merged with y[1][11]                   ;
-; y[1][8]                                 ; Merged with y[1][11]                   ;
-; y[1][9]                                 ; Merged with y[1][11]                   ;
-; x[0][12]                                ; Merged with x[0][11]                   ;
-; x[0][13]                                ; Merged with x[0][11]                   ;
-; x[0][16]                                ; Merged with x[0][11]                   ;
-; x[0][18]                                ; Merged with x[0][11]                   ;
-; x[0][19]                                ; Merged with x[0][11]                   ;
-; x[0][1]                                 ; Merged with x[0][11]                   ;
-; x[0][20]                                ; Merged with x[0][11]                   ;
-; x[0][22]                                ; Merged with x[0][11]                   ;
-; x[0][23]                                ; Merged with x[0][11]                   ;
-; x[0][25]                                ; Merged with x[0][11]                   ;
-; x[0][26]                                ; Merged with x[0][11]                   ;
-; x[0][29]                                ; Merged with x[0][11]                   ;
-; x[0][3]                                 ; Merged with x[0][11]                   ;
-; x[0][5]                                 ; Merged with x[0][11]                   ;
-; x[0][6]                                 ; Merged with x[0][11]                   ;
-; x[0][8]                                 ; Merged with x[0][11]                   ;
-; x[0][9]                                 ; Merged with x[0][11]                   ;
-; z[3][0]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[4][0]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[5][0]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[6][0]                                 ; Stuck at GND due to stuck port data_in ;
-; z[7][0]                                 ; Stuck at GND due to stuck port data_in ;
-; z[8][0]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[9][0]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[10][0]                                ; Stuck at GND due to stuck port data_in ;
-; z[11][0]                                ; Stuck at GND due to stuck port data_in ;
-; z[12][0]                                ; Stuck at VCC due to stuck port data_in ;
-; z[13][0]                                ; Stuck at GND due to stuck port data_in ;
-; z[14][0]                                ; Stuck at VCC due to stuck port data_in ;
-; z[15][0]                                ; Stuck at GND due to stuck port data_in ;
-; z[16][0]                                ; Stuck at VCC due to stuck port data_in ;
-; z[17][0]                                ; Stuck at GND due to stuck port data_in ;
-; z[2][4]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[2][5]                                 ; Stuck at GND due to stuck port data_in ;
-; z[2][6]                                 ; Stuck at VCC due to stuck port data_in ;
-; z[3][2]                                 ; Merged with z[3][1]                    ;
-; z[2][3]                                 ; Merged with z[2][1]                    ;
-; y[2][0]                                 ; Merged with x[2][0]                    ;
-; y[2][31]                                ; Stuck at GND due to stuck port data_in ;
-; x[2][31]                                ; Stuck at GND due to stuck port data_in ;
-; x[2][26]                                ; Stuck at GND due to stuck port data_in ;
-; y[2][26]                                ; Stuck at GND due to stuck port data_in ;
-; x[2][23]                                ; Stuck at GND due to stuck port data_in ;
-; y[2][23]                                ; Stuck at GND due to stuck port data_in ;
-; x[2][20]                                ; Stuck at GND due to stuck port data_in ;
-; y[2][20]                                ; Stuck at GND due to stuck port data_in ;
-; y[2][13]                                ; Stuck at GND due to stuck port data_in ;
-; x[2][13]                                ; Stuck at GND due to stuck port data_in ;
-; y[2][9]                                 ; Stuck at GND due to stuck port data_in ;
-; x[2][9]                                 ; Stuck at GND due to stuck port data_in ;
-; y[2][6]                                 ; Stuck at GND due to stuck port data_in ;
-; x[2][6]                                 ; Stuck at GND due to stuck port data_in ;
-; x[2][30]                                ; Stuck at GND due to stuck port data_in ;
-; y[2][30]                                ; Stuck at GND due to stuck port data_in ;
-; y[2][21]                                ; Merged with x[2][29]                   ;
-; y[2][18]                                ; Merged with x[2][29]                   ;
-; y[2][10]                                ; Merged with x[2][29]                   ;
-; y[2][7]                                 ; Merged with x[2][29]                   ;
-; y[2][5]                                 ; Merged with x[2][29]                   ;
-; x[2][1]                                 ; Merged with x[2][29]                   ;
-; x[2][3]                                 ; Merged with x[2][29]                   ;
-; x[2][16]                                ; Merged with x[2][29]                   ;
-; x[2][27]                                ; Merged with x[2][29]                   ;
-; x[2][14]                                ; Merged with x[2][29]                   ;
-; y[2][25]                                ; Merged with x[2][28]                   ;
-; x[2][25]                                ; Merged with x[2][28]                   ;
-; y[2][22]                                ; Merged with x[2][28]                   ;
-; x[2][22]                                ; Merged with x[2][28]                   ;
-; y[2][19]                                ; Merged with x[2][28]                   ;
-; x[2][19]                                ; Merged with x[2][28]                   ;
-; y[2][17]                                ; Merged with x[2][28]                   ;
-; x[2][17]                                ; Merged with x[2][28]                   ;
-; y[2][12]                                ; Merged with x[2][28]                   ;
-; y[2][11]                                ; Merged with x[2][28]                   ;
-; x[2][12]                                ; Merged with x[2][28]                   ;
-; x[2][11]                                ; Merged with x[2][28]                   ;
-; y[2][8]                                 ; Merged with x[2][28]                   ;
-; x[2][8]                                 ; Merged with x[2][28]                   ;
-; y[2][4]                                 ; Merged with x[2][28]                   ;
-; y[2][2]                                 ; Merged with x[2][28]                   ;
-; x[2][0]                                 ; Merged with x[2][28]                   ;
-; x[2][2]                                 ; Merged with x[2][28]                   ;
-; x[2][4]                                 ; Merged with x[2][28]                   ;
-; y[2][28]                                ; Merged with x[2][28]                   ;
-; y[2][15]                                ; Merged with x[2][28]                   ;
-; x[2][15]                                ; Merged with x[2][28]                   ;
-; x[2][24]                                ; Merged with y[2][29]                   ;
-; y[2][3]                                 ; Merged with y[2][29]                   ;
-; y[2][1]                                 ; Merged with y[2][29]                   ;
-; x[2][21]                                ; Merged with y[2][29]                   ;
-; x[2][18]                                ; Merged with y[2][29]                   ;
-; x[2][10]                                ; Merged with y[2][29]                   ;
-; x[2][5]                                 ; Merged with y[2][29]                   ;
-; y[2][27]                                ; Merged with y[2][29]                   ;
-; y[2][14]                                ; Merged with y[2][29]                   ;
-; y[2][16]                                ; Merged with y[2][29]                   ;
-; Total Number of Removed Registers = 222 ;                                        ;
-+-----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                    ;
-+---------------+---------------------------+----------------------------------------------------------------------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                             ;
-+---------------+---------------------------+----------------------------------------------------------------------------------------------------+
-; z[0][31]      ; Stuck at GND              ; y[1][0], y[1][2], y[1][4], y[1][7], y[1][10], y[1][14], y[1][15], y[1][17], y[1][21], y[1][24],    ;
-;               ; due to stuck port data_in ; y[1][27], y[1][28], y[1][30], y[1][31], x[1][0], x[1][2], x[1][4], x[1][7], x[1][10], x[1][14],    ;
-;               ;                           ; x[1][15], x[1][17], x[1][21], x[1][24], x[1][27], x[1][28], x[1][30], x[1][31], z[1][0], z[2][0],  ;
-;               ;                           ; z[1][1], z[1][2], z[1][3], z[1][4], z[1][5], z[1][6], z[3][0], z[4][0], z[5][0], z[6][0], z[7][0], ;
-;               ;                           ; z[8][0], z[9][0], z[10][0], z[11][0], z[12][0], z[13][0], z[14][0], z[15][0], z[16][0], z[17][0],  ;
-;               ;                           ; z[2][4], z[2][5], z[2][6], y[2][6], x[2][6]                                                        ;
-+---------------+---------------------------+----------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; z[0][0]                                ; Stuck at GND due to stuck port data_in ;
+; x[0][25]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][24]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][22]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][21]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][18]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][15]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][11]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][9]                                ; Stuck at GND due to stuck port data_in ;
+; x[0][8]                                ; Stuck at GND due to stuck port data_in ;
+; x[0][4]                                ; Stuck at GND due to stuck port data_in ;
+; x[0][1]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][25]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][24]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][23]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][22]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][21]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][20]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][19]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][18]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][17]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][16]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][15]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][14]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][13]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][12]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][11]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][10]                               ; Stuck at GND due to stuck port data_in ;
+; y[0][9]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][8]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][7]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][6]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][5]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][4]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][3]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][2]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][1]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][0]                                ; Stuck at GND due to stuck port data_in ;
+; z[0][25]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][10]                               ; Merged with x[0][0]                    ;
+; x[0][12]                               ; Merged with x[0][0]                    ;
+; x[0][13]                               ; Merged with x[0][0]                    ;
+; x[0][14]                               ; Merged with x[0][0]                    ;
+; x[0][16]                               ; Merged with x[0][0]                    ;
+; x[0][17]                               ; Merged with x[0][0]                    ;
+; x[0][19]                               ; Merged with x[0][0]                    ;
+; x[0][20]                               ; Merged with x[0][0]                    ;
+; x[0][23]                               ; Merged with x[0][0]                    ;
+; x[0][2]                                ; Merged with x[0][0]                    ;
+; x[0][3]                                ; Merged with x[0][0]                    ;
+; x[0][5]                                ; Merged with x[0][0]                    ;
+; x[0][6]                                ; Merged with x[0][0]                    ;
+; x[0][7]                                ; Merged with x[0][0]                    ;
+; Total Number of Removed Registers = 53 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -468,7 +285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1585  ;
+; Total registers                              ; 129   ;
 ; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -483,11 +300,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |CORDIC|mantissa           ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |CORDIC|ShiftRight0        ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CORDIC|ShiftRight0        ;
 ; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |CORDIC|ShiftLeft0         ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CORDIC|ShiftLeft0         ;
-; 9:1                ; 23 bits   ; 138 LEs       ; 138 LEs              ; 0 LEs                  ; No         ; |CORDIC|mantissa           ;
 ; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |CORDIC|fixed_in           ;
 ; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |CORDIC|fixed_in           ;
 ; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |CORDIC|fixed_in           ;
@@ -502,12 +319,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
-; M              ; 20    ; Signed Integer                                ;
+; M              ; 22    ; Signed Integer                                ;
 ; W              ; 32    ; Signed Integer                                ;
+; FixedW         ; 26    ; Signed Integer                                ;
 ; EXONENT_BITS   ; 8     ; Signed Integer                                ;
 ; MANTISSA_BITS  ; 23    ; Signed Integer                                ;
 ; INTEGER_BITS   ; 2     ; Signed Integer                                ;
-; FRACTION_BITS  ; 30    ; Signed Integer                                ;
+; FRACTION_BITS  ; 24    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -517,32 +335,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1585                        ;
+; arriav_ff             ; 129                         ;
 ;     SCLR              ; 24                          ;
-;     plain             ; 1561                        ;
-; arriav_lcell_comb     ; 1924                        ;
-;     arith             ; 1501                        ;
+;     plain             ; 105                         ;
+; arriav_lcell_comb     ; 1796                        ;
+;     arith             ; 1552                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 97                          ;
-;         2 data inputs ; 379                         ;
-;         3 data inputs ; 1024                        ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 267                         ;
+;         1 data inputs ; 157                         ;
+;         2 data inputs ; 477                         ;
+;         3 data inputs ; 863                         ;
+;         4 data inputs ; 26                          ;
+;         5 data inputs ; 28                          ;
+;     normal            ; 218                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 15                          ;
-;         4 data inputs ; 18                          ;
-;         5 data inputs ; 45                          ;
-;         6 data inputs ; 166                         ;
-;     shared            ; 155                         ;
-;         0 data inputs ; 5                           ;
-;         2 data inputs ; 150                         ;
-; boundary_port         ; 130                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 18                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 15                          ;
+;         5 data inputs ; 33                          ;
+;         6 data inputs ; 138                         ;
+;     shared            ; 26                          ;
+;         2 data inputs ; 26                          ;
+; boundary_port         ; 118                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.40                        ;
-; Average LUT depth     ; 3.28                        ;
+; Max LUT depth         ; 38.10                       ;
+; Average LUT depth     ; 29.52                       ;
 +-----------------------+-----------------------------+
 
 
@@ -551,7 +368,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -561,7 +378,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Mar 07 02:19:27 2024
+    Info: Processing started: Sat Mar 09 05:58:02 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CORDIC -c CORDIC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -569,41 +386,36 @@ Info (12021): Found 1 design units, including 1 entities, in source file testben
     Info (12023): Found entity 1: tb File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/testbench_1.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file cordic.v
     Info (12023): Found entity 1: CORDIC File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at testbench_1.v(20): created implicit net for "datab" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/testbench_1.v Line: 20
 Info (12127): Elaborating entity "CORDIC" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at CORDIC.v(144): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 144
-Warning (10764): Verilog HDL warning at CORDIC.v(153): converting signed shift amount to unsigned File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 153
-Warning (10764): Verilog HDL warning at CORDIC.v(157): converting signed shift amount to unsigned File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 157
-Warning (10230): Verilog HDL assignment warning at CORDIC.v(180): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 180
-Warning (10230): Verilog HDL assignment warning at CORDIC.v(183): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 183
-Warning (10230): Verilog HDL assignment warning at CORDIC.v(186): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 186
-Warning (10230): Verilog HDL assignment warning at CORDIC.v(189): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 189
-Warning (10230): Verilog HDL assignment warning at CORDIC.v(192): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 192
-Warning (10230): Verilog HDL assignment warning at CORDIC.v(195): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 195
-Warning (10230): Verilog HDL assignment warning at CORDIC.v(198): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 198
-Warning (10230): Verilog HDL assignment warning at CORDIC.v(205): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 205
+Warning (10230): Verilog HDL assignment warning at CORDIC.v(163): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 163
+Warning (10764): Verilog HDL warning at CORDIC.v(174): converting signed shift amount to unsigned File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 174
+Warning (10764): Verilog HDL warning at CORDIC.v(179): converting signed shift amount to unsigned File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 179
+Warning (10230): Verilog HDL assignment warning at CORDIC.v(203): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 203
+Warning (10230): Verilog HDL assignment warning at CORDIC.v(224): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 224
+Warning (10230): Verilog HDL assignment warning at CORDIC.v(228): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 228
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "fixedpoint_in[0]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
-    Warning (13410): Pin "fixedpoint_in[1]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
-    Warning (13410): Pin "fixedpoint_in[2]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
-    Warning (13410): Pin "fixedpoint_in[3]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
-    Warning (13410): Pin "fixedpoint_in[4]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
-    Warning (13410): Pin "fixedpoint_in[5]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
-    Warning (13410): Pin "fixedpoint_in[6]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
-    Warning (13410): Pin "fixedpoint_in[31]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
+    Warning (13410): Pin "fixedpoint_in[0]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 24
+    Warning (13410): Pin "fixedpoint_in[25]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 24
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/output_files/CORDIC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "dataa[31]" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 16
-Info (21057): Implemented 2085 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "dataa[31]" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 17
+Info (21057): Implemented 1937 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 34 input pins
-    Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 1955 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Thu Mar 07 02:19:37 2024
+    Info (21059): Implemented 84 output pins
+    Info (21061): Implemented 1819 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Sat Mar 09 05:58:12 2024
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/output_files/CORDIC.map.smsg.
 
 

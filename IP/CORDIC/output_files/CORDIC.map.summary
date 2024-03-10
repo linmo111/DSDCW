@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Mar 07 02:19:37 2024
+Analysis & Synthesis Status : Successful - Sat Mar 09 05:58:12 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : CORDIC
 Top-level Entity Name : CORDIC
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1585
-Total pins : 130
+Total registers : 129
+Total pins : 118
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

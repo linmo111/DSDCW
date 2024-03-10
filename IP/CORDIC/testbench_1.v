@@ -8,8 +8,8 @@ module tb ();
 	reg rst;
 	//Output from DUT is wire type
 	wire [31:0] result;
-	wire [31:0] fixedpoint_in;
-	wire [31:0] fixedpoint_out;
+	wire [25:0] fixedpoint_in;
+	wire [25:0] fixedpoint_out;
 //	wire [23:0] fixedmanti;
 //	wire [7:0] shiftnum;
 
@@ -17,7 +17,7 @@ module tb ();
 	//mul refers to the verilog module defined by the LPM_MULT ip
 	CORDIC unit(
 		.dataa(dataa),
-		.datab(datab), 
+//		.datab(datab), 
 		.rst(rst),
 		.fixedpoint_in(fixedpoint_in),
 		.fixedpoint_out(fixedpoint_out),

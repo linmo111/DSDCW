@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2024.03.07.01:14:21</td>
+    <td class="l">2024.03.09.05:37:51</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -250,10 +250,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_cordic_0"> </a>
+  <a name="module_cordicMulti_0"> </a>
   <div>
    <hr/>
-   <h2>cordic_0</h2>cordic v1.0
+   <h2>cordicMulti_0</h2>cordicMulti v1.0
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -262,10 +262,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_cpu">cpu</a>
       </td>
       <td class="from">custom_instruction_master&#160;&#160;</td>
-      <td class="main" rowspan="2">cordic_0</td>
+      <td class="main" rowspan="2">cordicMulti_0</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;nios_custom_instruction_slave</td>
+      <td class="to">&#160;&#160;nios_custom_instruction_slave_1</td>
      </tr>
     </table>
    </div>
@@ -278,11 +278,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">M</td>
-        <td class="parametervalue">20</td>
+        <td class="parametervalue">22</td>
        </tr>
        <tr>
         <td class="parametername">W</td>
         <td class="parametervalue">32</td>
+       </tr>
+       <tr>
+        <td class="parametername">FixedW</td>
+        <td class="parametervalue">26</td>
        </tr>
        <tr>
         <td class="parametername">EXONENT_BITS</td>
@@ -298,7 +302,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">FRACTION_BITS</td>
-        <td class="parametervalue">30</td>
+        <td class="parametervalue">24</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -457,13 +461,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">custom_instruction_master&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_cordic_0">cordic_0</a>
+       <a href="#module_cordicMulti_0">cordicMulti_0</a>
       </td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;nios_custom_instruction_slave</td>
+      <td class="to">&#160;&#160;nios_custom_instruction_slave_1</td>
      </tr>
     </table>
    </div>
@@ -1220,7 +1224,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">customInstSlavesSystemInfo</td>
-        <td class="parametervalue">&lt;info&gt;&lt;slave name="cordic_0" baseAddress="0" addressSpan="1" clockCycleType="MULTICYCLE" /&gt;&lt;/info&gt;</td>
+        <td class="parametervalue">&lt;info&gt;&lt;slave name="cordicmulti_0" baseAddress="0" addressSpan="1" clockCycleType="MULTICYCLE" /&gt;&lt;/info&gt;</td>
        </tr>
        <tr>
         <td class="parametername">customInstSlavesSystemInfo_nios_a</td>
@@ -2268,7 +2272,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1709745261</td>
+        <td class="parametervalue">1709933871</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -2293,7 +2297,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1709745261</td>
+        <td class="parametervalue">1709933871</td>
        </tr>
       </table>
      </td>
@@ -2302,8 +2306,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.01 seconds</td>
-    <td class="r">rendering took 0.04 seconds</td>
+    <td class="l">generation took 0.00 seconds</td>
+    <td class="r">rendering took 0.02 seconds</td>
    </tr>
   </table>
  </body>
