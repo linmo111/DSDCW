@@ -225,7 +225,7 @@ wire sign;
                 mantissa = frac_part[22:0]<<<1;
             end
         end else begin
-            exponent = 127 + int_part;
+            exponent = 127 ;
             mantissa = frac_part[24:2];
         end
 	 

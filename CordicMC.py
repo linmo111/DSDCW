@@ -1,5 +1,6 @@
 import numpy as np
 import math
+import scipy.stats as stats
 
 def conversion(num,width):
     
@@ -73,9 +74,13 @@ e = [
     "000000000000000000000011111",
     "000000000000000000000001111"
 ]
+FB=25
+IT=22
 
 
-
+angles = [
+    conversion(math.atan(2**-i),27)  for i in range(22)
+]
 
 
 
@@ -83,32 +88,35 @@ e = [
 
 
 def cordic_cos(angle):
+    iterations=15
     w=27
     x[0]=backconversion("00100110110111010011101101")
     y[0]=0
     z[0]=changeNumToWidth(angle,w)
-    for i in range(0,21):
+    for i in range(0,iterations-1):
         # print(i)
         if z[i]>=0:
             x[i+1]=changeNumToWidth(x[i]-y[i]*(2**-i),w)
             y[i+1]=changeNumToWidth(y[i]+x[i]*(2**-i),w)
-            z[i+1]=changeNumToWidth(z[i]-backconversion(e[i]),w)
+            z[i+1]=changeNumToWidth(z[i]-backconversion(angles[i]),w)
         else:
             x[i+1]=changeNumToWidth(x[i]+y[i]*(2**-i),w)
             y[i+1]=changeNumToWidth(y[i]-x[i]*(2**-i),w)
-            z[i+1]=changeNumToWidth(z[i]+backconversion(e[i]),w)
+            z[i+1]=changeNumToWidth(z[i]+backconversion(angles[i]),w)
     # CORDIC block implementation (replace with your own code)
     # This is a placeholder function that returns the cosine of the angle
-    return changeNumToWidth(x[21],w)
+    return changeNumToWidth(x[iterations-1],w)
 
 def monte_carlo_error_test(num_iterations, num_angles):
     accumulated_squared_error_cordic = 0
+    errors = []
+
     # accumulated_squared_error_double = 0
 
     for _ in range(num_iterations):
         for _ in range(num_angles):
             # Generate a random angle between 0 and 2π
-            random_angle = np.random.uniform(-1, 1)
+            random_angle =np.float32( np.random.uniform(-1, 1))
 
             # Calculate the expected cosine value using the math library (double precision)
             expected_cos_double = np.cos(random_angle)
@@ -117,9 +125,10 @@ def monte_carlo_error_test(num_iterations, num_angles):
             cordic_cos_val = cordic_cos(random_angle)
 
             # Calculate the squared error for CORDIC
-            squared_error_cordic = abs(expected_cos_double - cordic_cos_val)
-            accumulated_squared_error_cordic += squared_error_cordic
-
+            error_cordic = (expected_cos_double - cordic_cos_val)
+            errors.append(error_cordic)
+            # accumulated_squared_error_cordic += squared_error_cordic
+            
             # Calculate the expected cosine value using double precision
             # expected_cos_val = np.cos(random_angle)
 
@@ -128,18 +137,25 @@ def monte_carlo_error_test(num_iterations, num_angles):
             # accumulated_squared_error_double += squared_error_double
 
     # Calculate the mean squared error (MSE) for CORDIC and double precision
+    mean_error = np.mean(errors)
+    sem = stats.sem(errors)  # Standard error of the mean
+    confidence_interval = stats.t.interval(0.95, len(errors)-1, loc=mean_error, scale=sem)
     mse_cordic = accumulated_squared_error_cordic / (num_iterations * num_angles)
     # mse_double = accumulated_squared_error_double / (num_iterations * num_angles)
 
-    return mse_cordic
+    # return mse_cordic
+    return mean_error, confidence_interval
 # Configuration
 num_iterations = 1000
 num_angles = 100
 
 # Run the Monte Carlo error test
 print("running")
-mse_cordic= monte_carlo_error_test(num_iterations, num_angles)
+# mse_cordic= monte_carlo_error_test(num_iterations, num_angles)
+mean_error, confidence_interval = monte_carlo_error_test(num_iterations, num_angles)
+print(f"Mean error: {mean_error}")
+print(f"95% Confidence Interval: {confidence_interval}")
 
-print(f"Mean Squared Error (MSE) - CORDIC: {mse_cordic}")
-print(conversion(0.001953123,27))
+# print(f"Mean Squared Error (MSE) - CORDIC: {mse_cordic}")
+# print(conversion(0.001953123,27))
 # print(f"Mean Squared Error (MSE) - Double Precision: {mse_double}")

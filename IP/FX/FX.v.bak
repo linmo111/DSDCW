@@ -1,0 +1,47 @@
+module FX (
+    input wire clk,
+    input wire clk_en,
+    input wire rst,
+    input wire [31:0] dataa,s
+    input wire [31:0] datab,
+    output wire [31:0] result
+);
+
+    wire [31:0] mult_result;
+    wire [31:0] add_result;
+    wire [31:0] sub_result;
+
+    // Instantiate the Fp_mult IP
+    Fp_mult fp_mult_inst (
+        .clk(clk),
+        .dataa(dataa),
+        .datab(datab),
+        .clk_en(clk_en),
+        .rst(rst),
+        .result(mult_result)
+    );
+
+    // Instantiate the Fp_add IP
+    Fp_add fp_add_inst (
+        .clk(clk),
+        .dataa(mult_result),
+        .datab(dataa),
+        .clk_en(clk_en),
+        .rst(rst),
+        .result(add_result)
+    );
+
+    // Instantiate the Fp_sub IP
+    Fp_sub fp_sub_inst (
+        .clk(clk),
+        .dataa(add_result),
+        .datab(datab),
+        .clk_en(clk_en),
+        .rst(rst),
+        .result(sub_result)
+    );
+
+    // Assign the final result
+    assign result = sub_result;
+
+endmodule
