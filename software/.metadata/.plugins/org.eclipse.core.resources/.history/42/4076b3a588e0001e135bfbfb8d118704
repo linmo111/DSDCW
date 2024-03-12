@@ -1,0 +1,32 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <stdio.h>
+#define ALT_CI_FX_0(A,B) __builtin_custom_fnff(ALT_CI_FX_0_N,(A),(B))
+#define ALT_CI_FX_0_N 0x1
+
+
+
+int main()
+{
+  float x=128.0;
+  float oldsum=2.0;
+  float customres= ALT_CI_FX_0(x,oldsum);
+  float resOriginal=oldsum+0.5*x+x*x*(cos((x-128)/128));
+  printf(res);
+
+  return 0;
+}

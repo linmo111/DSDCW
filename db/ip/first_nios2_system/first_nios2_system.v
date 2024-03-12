@@ -68,10 +68,12 @@ module first_nios2_system (
 	wire  [31:0] cpu_custom_instruction_master_multi_xconnect_ci_master0_dataa;          // cpu_custom_instruction_master_multi_xconnect:ci_master0_dataa -> cpu_custom_instruction_master_multi_slave_translator0:ci_slave_dataa
 	wire         cpu_custom_instruction_master_multi_xconnect_ci_master0_reset;          // cpu_custom_instruction_master_multi_xconnect:ci_master0_reset -> cpu_custom_instruction_master_multi_slave_translator0:ci_slave_reset
 	wire         cpu_custom_instruction_master_multi_xconnect_ci_master0_writerc;        // cpu_custom_instruction_master_multi_xconnect:ci_master0_writerc -> cpu_custom_instruction_master_multi_slave_translator0:ci_slave_writerc
-	wire  [31:0] cpu_custom_instruction_master_multi_slave_translator0_ci_master_result; // cordicMulti_0:result -> cpu_custom_instruction_master_multi_slave_translator0:ci_master_result
-	wire         cpu_custom_instruction_master_multi_slave_translator0_ci_master_clk;    // cpu_custom_instruction_master_multi_slave_translator0:ci_master_clk -> cordicMulti_0:clk
-	wire  [31:0] cpu_custom_instruction_master_multi_slave_translator0_ci_master_dataa;  // cpu_custom_instruction_master_multi_slave_translator0:ci_master_dataa -> cordicMulti_0:dataa
-	wire         cpu_custom_instruction_master_multi_slave_translator0_ci_master_reset;  // cpu_custom_instruction_master_multi_slave_translator0:ci_master_reset -> cordicMulti_0:rst
+	wire  [31:0] cpu_custom_instruction_master_multi_slave_translator0_ci_master_result; // fx_0:result -> cpu_custom_instruction_master_multi_slave_translator0:ci_master_result
+	wire         cpu_custom_instruction_master_multi_slave_translator0_ci_master_clk;    // cpu_custom_instruction_master_multi_slave_translator0:ci_master_clk -> fx_0:clk
+	wire         cpu_custom_instruction_master_multi_slave_translator0_ci_master_clk_en; // cpu_custom_instruction_master_multi_slave_translator0:ci_master_clken -> fx_0:clk_en
+	wire  [31:0] cpu_custom_instruction_master_multi_slave_translator0_ci_master_datab;  // cpu_custom_instruction_master_multi_slave_translator0:ci_master_datab -> fx_0:datab
+	wire  [31:0] cpu_custom_instruction_master_multi_slave_translator0_ci_master_dataa;  // cpu_custom_instruction_master_multi_slave_translator0:ci_master_dataa -> fx_0:dataa
+	wire         cpu_custom_instruction_master_multi_slave_translator0_ci_master_reset;  // cpu_custom_instruction_master_multi_slave_translator0:ci_master_reset -> fx_0:rst
 	wire  [31:0] cpu_data_master_readdata;                                               // mm_interconnect_0:cpu_data_master_readdata -> cpu:d_readdata
 	wire         cpu_data_master_waitrequest;                                            // mm_interconnect_0:cpu_data_master_waitrequest -> cpu:d_waitrequest
 	wire         cpu_data_master_debugaccess;                                            // cpu:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:cpu_data_master_debugaccess
@@ -128,21 +130,6 @@ module first_nios2_system (
 	wire         rst_controller_reset_out_reset;                                         // rst_controller:reset_out -> [cpu:reset_n, irq_mapper:reset, jtag_uart:rst_n, led_pio:reset_n, mm_interconnect_0:cpu_reset_reset_bridge_in_reset_reset, rst_translator:in_reset, sdram:reset_n, sys_clk_timer:reset_n, sysid:reset_n]
 	wire         rst_controller_reset_out_reset_req;                                     // rst_controller:reset_req -> [cpu:reset_req, rst_translator:reset_req_in]
 
-	CORDIC #(
-		.M             (22),
-		.W             (32),
-		.FixedW        (27),
-		.EXONENT_BITS  (8),
-		.MANTISSA_BITS (23),
-		.INTEGER_BITS  (2),
-		.FRACTION_BITS (25)
-	) cordicmulti_0 (
-		.dataa  (cpu_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  // nios_custom_instruction_slave_1.dataa
-		.rst    (cpu_custom_instruction_master_multi_slave_translator0_ci_master_reset),  //                                .reset
-		.result (cpu_custom_instruction_master_multi_slave_translator0_ci_master_result), //                                .result
-		.clk    (cpu_custom_instruction_master_multi_slave_translator0_ci_master_clk)     //                                .clk
-	);
-
 	first_nios2_system_cpu cpu (
 		.clk                                 (clk_clk),                                           //                       clk.clk
 		.reset_n                             (~rst_controller_reset_out_reset),                   //                     reset.reset_n
@@ -187,6 +174,15 @@ module first_nios2_system (
 		.A_ci_multi_readrb                   (cpu_custom_instruction_master_multi_readrb),        //                          .multi_readrb
 		.A_ci_multi_start                    (cpu_custom_instruction_master_start),               //                          .start
 		.A_ci_multi_writerc                  (cpu_custom_instruction_master_multi_writerc)        //                          .multi_writerc
+	);
+
+	FX fx_0 (
+		.clk_en (cpu_custom_instruction_master_multi_slave_translator0_ci_master_clk_en), // nios_custom_instruction_slave.clk_en
+		.rst    (cpu_custom_instruction_master_multi_slave_translator0_ci_master_reset),  //                              .reset
+		.dataa  (cpu_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  //                              .dataa
+		.datab  (cpu_custom_instruction_master_multi_slave_translator0_ci_master_datab),  //                              .datab
+		.result (cpu_custom_instruction_master_multi_slave_translator0_ci_master_result), //                              .result
+		.clk    (cpu_custom_instruction_master_multi_slave_translator0_ci_master_clk)     //                              .clk
 	);
 
 	first_nios2_system_jtag_uart jtag_uart (
@@ -357,7 +353,7 @@ module first_nios2_system (
 	altera_customins_slave_translator #(
 		.N_WIDTH          (8),
 		.USE_DONE         (0),
-		.NUM_FIXED_CYCLES (5)
+		.NUM_FIXED_CYCLES (29)
 	) cpu_custom_instruction_master_multi_slave_translator0 (
 		.ci_slave_dataa      (cpu_custom_instruction_master_multi_xconnect_ci_master0_dataa),          //  ci_slave.dataa
 		.ci_slave_datab      (cpu_custom_instruction_master_multi_xconnect_ci_master0_datab),          //          .datab
@@ -378,11 +374,11 @@ module first_nios2_system (
 		.ci_slave_start      (cpu_custom_instruction_master_multi_xconnect_ci_master0_start),          //          .start
 		.ci_slave_done       (cpu_custom_instruction_master_multi_xconnect_ci_master0_done),           //          .done
 		.ci_master_dataa     (cpu_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  // ci_master.dataa
+		.ci_master_datab     (cpu_custom_instruction_master_multi_slave_translator0_ci_master_datab),  //          .datab
 		.ci_master_result    (cpu_custom_instruction_master_multi_slave_translator0_ci_master_result), //          .result
 		.ci_master_clk       (cpu_custom_instruction_master_multi_slave_translator0_ci_master_clk),    //          .clk
-		.ci_master_clken     (),                                                                       //          .clk_en
+		.ci_master_clken     (cpu_custom_instruction_master_multi_slave_translator0_ci_master_clk_en), //          .clk_en
 		.ci_master_reset     (cpu_custom_instruction_master_multi_slave_translator0_ci_master_reset),  //          .reset
-		.ci_master_datab     (),                                                                       // (terminated)
 		.ci_master_n         (),                                                                       // (terminated)
 		.ci_master_readra    (),                                                                       // (terminated)
 		.ci_master_readrb    (),                                                                       // (terminated)

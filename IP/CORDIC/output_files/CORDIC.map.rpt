@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CORDIC
-Tue Mar 12 07:23:31 2024
+Wed Mar 13 05:51:32 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,14 +46,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 12 07:23:31 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 13 05:51:32 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CORDIC                                      ;
 ; Top-level Entity Name           ; CORDIC                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 213                                         ;
-; Total pins                      ; 120                                         ;
+; Total registers                 ; 136                                         ;
+; Total pins                      ; 122                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -186,25 +186,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 979       ;
+; Estimate of Logic utilization (ALMs needed) ; 707       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1799      ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 159       ;
-;     -- 5 input functions                    ; 42        ;
-;     -- 4 input functions                    ; 28        ;
-;     -- <=3 input functions                  ; 1570      ;
+; Combinational ALUT usage for logic          ; 1273      ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 139       ;
+;     -- 5 input functions                    ; 82        ;
+;     -- 4 input functions                    ; 37        ;
+;     -- <=3 input functions                  ; 1014      ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 213       ;
+; Dedicated logic registers                   ; 136       ;
 ;                                             ;           ;
-; I/O pins                                    ; 120       ;
+; I/O pins                                    ; 122       ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 213       ;
-; Total fan-out                               ; 7271      ;
-; Average fan-out                             ; 3.23      ;
+; Maximum fan-out                             ; 136       ;
+; Total fan-out                               ; 5261      ;
+; Average fan-out                             ; 3.18      ;
 +---------------------------------------------+-----------+
 
 
@@ -213,7 +213,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |CORDIC                    ; 1799 (1799)         ; 213 (213)                 ; 0                 ; 0          ; 120  ; 0            ; |CORDIC             ; CORDIC      ; work         ;
+; |CORDIC                    ; 1273 (1273)         ; 136 (136)                 ; 0                 ; 0          ; 122  ; 0            ; |CORDIC             ; CORDIC      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -224,33 +224,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
 ; z[0][0]                                ; Stuck at GND due to stuck port data_in ;
+; x[0][27]                               ; Stuck at GND due to stuck port data_in ;
 ; x[0][26]                               ; Stuck at GND due to stuck port data_in ;
-; x[0][25]                               ; Stuck at GND due to stuck port data_in ;
-; x[0][24]                               ; Stuck at VCC due to stuck port data_in ;
+; x[0][25]                               ; Stuck at VCC due to stuck port data_in ;
+; x[0][24]                               ; Stuck at GND due to stuck port data_in ;
 ; x[0][23]                               ; Stuck at GND due to stuck port data_in ;
-; x[0][22]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][22]                               ; Stuck at VCC due to stuck port data_in ;
 ; x[0][21]                               ; Stuck at VCC due to stuck port data_in ;
-; x[0][20]                               ; Stuck at VCC due to stuck port data_in ;
-; x[0][19]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][20]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][19]                               ; Stuck at VCC due to stuck port data_in ;
 ; x[0][18]                               ; Stuck at VCC due to stuck port data_in ;
-; x[0][17]                               ; Stuck at VCC due to stuck port data_in ;
-; x[0][16]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][17]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][16]                               ; Stuck at VCC due to stuck port data_in ;
 ; x[0][15]                               ; Stuck at VCC due to stuck port data_in ;
 ; x[0][14]                               ; Stuck at VCC due to stuck port data_in ;
-; x[0][13]                               ; Stuck at VCC due to stuck port data_in ;
-; x[0][12]                               ; Stuck at GND due to stuck port data_in ;
-; x[0][11]                               ; Stuck at VCC due to stuck port data_in ;
+; x[0][13]                               ; Stuck at GND due to stuck port data_in ;
+; x[0][12]                               ; Stuck at VCC due to stuck port data_in ;
+; x[0][11]                               ; Stuck at GND due to stuck port data_in ;
 ; x[0][10]                               ; Stuck at GND due to stuck port data_in ;
-; x[0][9]                                ; Stuck at GND due to stuck port data_in ;
+; x[0][9]                                ; Stuck at VCC due to stuck port data_in ;
 ; x[0][8]                                ; Stuck at VCC due to stuck port data_in ;
 ; x[0][7]                                ; Stuck at VCC due to stuck port data_in ;
-; x[0][6]                                ; Stuck at VCC due to stuck port data_in ;
-; x[0][5]                                ; Stuck at GND due to stuck port data_in ;
+; x[0][6]                                ; Stuck at GND due to stuck port data_in ;
+; x[0][5]                                ; Stuck at VCC due to stuck port data_in ;
 ; x[0][4]                                ; Stuck at VCC due to stuck port data_in ;
-; x[0][3]                                ; Stuck at VCC due to stuck port data_in ;
-; x[0][2]                                ; Stuck at GND due to stuck port data_in ;
-; x[0][1]                                ; Stuck at VCC due to stuck port data_in ;
+; x[0][3]                                ; Stuck at GND due to stuck port data_in ;
+; x[0][2]                                ; Stuck at VCC due to stuck port data_in ;
+; x[0][1]                                ; Stuck at GND due to stuck port data_in ;
 ; x[0][0]                                ; Stuck at GND due to stuck port data_in ;
+; y[0][27]                               ; Stuck at GND due to stuck port data_in ;
 ; y[0][26]                               ; Stuck at GND due to stuck port data_in ;
 ; y[0][25]                               ; Stuck at GND due to stuck port data_in ;
 ; y[0][24]                               ; Stuck at GND due to stuck port data_in ;
@@ -278,9 +280,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; y[0][2]                                ; Stuck at GND due to stuck port data_in ;
 ; y[0][1]                                ; Stuck at GND due to stuck port data_in ;
 ; y[0][0]                                ; Stuck at GND due to stuck port data_in ;
-; z[0][26]                               ; Stuck at GND due to stuck port data_in ;
+; z[0][27]                               ; Stuck at GND due to stuck port data_in ;
+; z[0][2]                                ; Stuck at GND due to stuck port data_in ;
 ; z[0][1]                                ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 57 ;                                        ;
+; Total Number of Removed Registers = 60 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -289,7 +292,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 213   ;
+; Total registers                              ; 136   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -308,7 +311,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CORDIC|ShiftRight0        ;
 ; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |CORDIC|ShiftLeft0         ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CORDIC|ShiftLeft0         ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |CORDIC|mantissa           ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CORDIC|exponent           ;
+; 5:1                ; 22 bits   ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |CORDIC|mantissa           ;
 ; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |CORDIC|fixed_in           ;
 ; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |CORDIC|fixed_in           ;
 ; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |CORDIC|fixed_in           ;
@@ -323,13 +327,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
-; M              ; 22    ; Signed Integer                                ;
+; M              ; 15    ; Signed Integer                                ;
 ; W              ; 32    ; Signed Integer                                ;
-; FixedW         ; 27    ; Signed Integer                                ;
+; FixedW         ; 28    ; Signed Integer                                ;
 ; EXONENT_BITS   ; 8     ; Signed Integer                                ;
 ; MANTISSA_BITS  ; 23    ; Signed Integer                                ;
 ; INTEGER_BITS   ; 2     ; Signed Integer                                ;
-; FRACTION_BITS  ; 25    ; Signed Integer                                ;
+; FRACTION_BITS  ; 26    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -339,29 +343,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 213                         ;
-;     plain             ; 213                         ;
-; arriav_lcell_comb     ; 1801                        ;
-;     arith             ; 1556                        ;
+; arriav_ff             ; 136                         ;
+;     plain             ; 136                         ;
+; arriav_lcell_comb     ; 1275                        ;
+;     arith             ; 1007                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 158                         ;
-;         2 data inputs ; 494                         ;
-;         3 data inputs ; 860                         ;
-;         4 data inputs ; 14                          ;
-;         5 data inputs ; 29                          ;
-;     normal            ; 218                         ;
+;         1 data inputs ; 136                         ;
+;         2 data inputs ; 323                         ;
+;         3 data inputs ; 497                         ;
+;         4 data inputs ; 20                          ;
+;         5 data inputs ; 30                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 239                         ;
 ;         0 data inputs ; 2                           ;
 ;         2 data inputs ; 17                          ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 14                          ;
-;         5 data inputs ; 13                          ;
-;         6 data inputs ; 159                         ;
-;     shared            ; 27                          ;
-;         2 data inputs ; 27                          ;
-; boundary_port         ; 120                         ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 17                          ;
+;         5 data inputs ; 52                          ;
+;         6 data inputs ; 139                         ;
+;     shared            ; 28                          ;
+;         2 data inputs ; 28                          ;
+; boundary_port         ; 122                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 25.50                       ;
-; Average LUT depth     ; 20.42                       ;
+; Average LUT depth     ; 19.43                       ;
 +-----------------------+-----------------------------+
 
 
@@ -370,7 +376,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -380,7 +386,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 12 07:23:20 2024
+    Info: Processing started: Wed Mar 13 05:51:22 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CORDIC -c CORDIC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -394,9 +400,9 @@ Warning (10764): Verilog HDL warning at CORDIC.v(174): converting signed shift a
 Warning (10764): Verilog HDL warning at CORDIC.v(179): converting signed shift amount to unsigned File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 179
 Warning (10230): Verilog HDL assignment warning at CORDIC.v(203): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 203
 Warning (10230): Verilog HDL assignment warning at CORDIC.v(206): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 206
+Warning (10230): Verilog HDL assignment warning at CORDIC.v(209): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 209
 Warning (10230): Verilog HDL assignment warning at CORDIC.v(224): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 224
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "result[25]" is stuck at VCC File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
     Warning (13410): Pin "result[26]" is stuck at VCC File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
     Warning (13410): Pin "result[27]" is stuck at VCC File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
     Warning (13410): Pin "result[28]" is stuck at VCC File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
@@ -404,7 +410,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "result[30]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 23
     Warning (13410): Pin "fixedpoint_in[0]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 24
     Warning (13410): Pin "fixedpoint_in[1]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 24
-    Warning (13410): Pin "fixedpoint_in[26]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 24
+    Warning (13410): Pin "fixedpoint_in[2]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 24
+    Warning (13410): Pin "fixedpoint_in[27]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/output_files/CORDIC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -412,15 +419,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "dataa[31]" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 17
     Warning (15610): No output dependent on input pin "rst" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 20
-Info (21057): Implemented 1944 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1419 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 34 input pins
-    Info (21059): Implemented 86 output pins
-    Info (21061): Implemented 1824 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Tue Mar 12 07:23:31 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21059): Implemented 88 output pins
+    Info (21061): Implemented 1297 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Wed Mar 13 05:51:32 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+

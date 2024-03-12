@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FX
-Tue Mar 12 08:13:31 2024
+Wed Mar 13 05:59:41 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -125,13 +125,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 12 08:13:31 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 13 05:59:40 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; FX                                          ;
 ; Top-level Entity Name           ; FX                                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2347                                        ;
+; Total registers                 ; 2270                                        ;
 ; Total pins                      ; 387                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -295,25 +295,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 2380      ;
+; Estimate of Logic utilization (ALMs needed) ; 2110      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 4052      ;
-;     -- 7 input functions                    ; 21        ;
-;     -- 6 input functions                    ; 479       ;
-;     -- 5 input functions                    ; 400       ;
-;     -- 4 input functions                    ; 454       ;
-;     -- <=3 input functions                  ; 2698      ;
+; Combinational ALUT usage for logic          ; 3526      ;
+;     -- 7 input functions                    ; 22        ;
+;     -- 6 input functions                    ; 459       ;
+;     -- 5 input functions                    ; 443       ;
+;     -- 4 input functions                    ; 462       ;
+;     -- <=3 input functions                  ; 2140      ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 2347      ;
+; Dedicated logic registers                   ; 2270      ;
 ;                                             ;           ;
 ; I/O pins                                    ; 387       ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 5         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 2347      ;
-; Total fan-out                               ; 25338     ;
-; Average fan-out                             ; 3.53      ;
+; Maximum fan-out                             ; 2270      ;
+; Total fan-out                               ; 23332     ;
+; Average fan-out                             ; 3.55      ;
 +---------------------------------------------+-----------+
 
 
@@ -322,8 +322,8 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                      ; Entity Name                           ; Library Name ;
 +------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------------+
-; |FX                                                                                ; 4052 (3)            ; 2347 (0)                  ; 0                 ; 5          ; 387  ; 0            ; |FX                                                                                                                                                                                                                                                                                                                                                                                                      ; FX                                    ; work         ;
-;    |CORDIC:cordic|                                                                 ; 1766 (1766)         ; 213 (213)                 ; 0                 ; 0          ; 0    ; 0            ; |FX|CORDIC:cordic                                                                                                                                                                                                                                                                                                                                                                                        ; CORDIC                                ; work         ;
+; |FX                                                                                ; 3526 (3)            ; 2270 (0)                  ; 0                 ; 5          ; 387  ; 0            ; |FX                                                                                                                                                                                                                                                                                                                                                                                                      ; FX                                    ; work         ;
+;    |CORDIC:cordic|                                                                 ; 1240 (1240)         ; 136 (136)                 ; 0                 ; 0          ; 0    ; 0            ; |FX|CORDIC:cordic                                                                                                                                                                                                                                                                                                                                                                                        ; CORDIC                                ; work         ;
 ;    |fp_adder:adda|                                                                 ; 593 (0)             ; 372 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |FX|fp_adder:adda                                                                                                                                                                                                                                                                                                                                                                                        ; fp_adder                              ; work         ;
 ;       |fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|            ; 593 (261)           ; 372 (255)                 ; 0                 ; 0          ; 0    ; 0            ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component                                                                                                                                                                                                                                                                                                                        ; fp_adder_altfp_add_sub_50k            ; work         ;
 ;          |fp_adder_altbarrel_shift_aeb:rbarrel_shift|                              ; 58 (58)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift                                                                                                                                                                                                                                                                             ; fp_adder_altbarrel_shift_aeb          ; work         ;
@@ -558,33 +558,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                                                                                                                                                     ; Reason for Removal                                                                                                                                                         ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; CORDIC:cordic|z[0][0]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][27]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][26]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][25]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][24]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][25]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][24]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][23]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][22]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][22]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][21]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][20]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][19]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][20]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][19]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][18]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][17]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][16]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][17]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][16]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][15]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][14]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][13]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][12]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][11]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][13]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][12]                                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][11]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][10]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][9]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][9]                                                                                                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][8]                                                                                                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][7]                                                                                                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][6]                                                                                                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][5]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][6]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][5]                                                                                                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][4]                                                                                                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][3]                                                                                                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][2]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|x[0][1]                                                                                                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][3]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][2]                                                                                                                                             ; Stuck at VCC due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|x[0][1]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|x[0][0]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|y[0][27]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|y[0][26]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|y[0][25]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|y[0][24]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
@@ -612,7 +614,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CORDIC:cordic|y[0][2]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|y[0][1]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|y[0][0]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
-; CORDIC:cordic|z[0][26]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|z[0][27]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
+; CORDIC:cordic|z[0][2]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; CORDIC:cordic|z[0][1]                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|datab_sign_dffe1                                                      ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
 ; fp_multiplier:multe|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|lpm_mult:man_product2_mult|mult_6ct:auto_generated|datab_input_reg[0..22] ; Stuck at GND due to stuck port data_in                                                                                                                                     ;
@@ -735,7 +738,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fp_multiplier:multb|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|input_is_nan_dffe_1                                                       ; Merged with fp_multiplier:multa|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|input_is_nan_dffe_1                                                    ;
 ; fp_multiplier:multb|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|input_is_infinity_dffe_0                                                  ; Merged with fp_multiplier:multa|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|input_is_infinity_dffe_0                                               ;
 ; fp_multiplier:multb|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|input_is_nan_dffe_0                                                       ; Merged with fp_multiplier:multa|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|input_is_nan_dffe_0                                                    ;
-; Total Number of Removed Registers = 244                                                                                                                           ;                                                                                                                                                                            ;
+; Total Number of Removed Registers = 247                                                                                                                           ;                                                                                                                                                                            ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -765,7 +768,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2347  ;
+; Total registers                              ; 2270  ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 188   ;
 ; Number of registers using Asynchronous Clear ; 2134  ;
@@ -780,51 +783,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_res_dffe4[17]                                                              ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_res_dffe4[13]                                                              ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|man_res_dffe4[22]                                                ;
-; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_add_sub_res_mag_dffe21[6]                                                  ;
-; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_add_sub_res_mag_dffe21[14]                                                 ;
-; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|man_add_sub_res_mag_dffe21[3]                                    ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|sbit_piper1d[17]                    ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|sbit_piper1d[18]                    ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift|sbit_piper1d[21] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_res_dffe4[13]                                                              ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_res_dffe4[22]                                                              ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|man_res_dffe4[18]                                                ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_add_sub_res_mag_dffe21[11]                                                 ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_add_sub_res_mag_dffe21[6]                                                  ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|man_add_sub_res_mag_dffe21[10]                                   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|sbit_piper1d[18]                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|sbit_piper1d[20]                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift|sbit_piper1d[17] ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|sbit_piper1d[25]                    ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|sbit_piper1d[25]                    ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift|sbit_piper1d[24] ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][7]                                                                                                                                        ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][10]                                                                                                                                       ;
 ; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][19]                                                                                                                                       ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][5]                                                                                                                                        ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][15]                                                                                                                                       ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][10]                                                                                                                                       ;
-; 14:1               ; 3 bits    ; 27 LEs        ; 24 LEs               ; 3 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][22]                                                                                                                                       ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][6]                                                                                                                                        ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][18]                                                                                                                                       ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][13]                                                                                                                                       ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 24 LEs               ; 3 LEs                  ; Yes        ; |FX|CORDIC:cordic|z[0][25]                                                                                                                                       ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |FX|CORDIC:cordic|ShiftRight0                                                                                                                                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|CORDIC:cordic|ShiftRight0                                                                                                                                    ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[40]                          ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[87]                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[91]                          ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[38]                          ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[87]                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[90]                          ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift|smux_w[45]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift|smux_w[89]       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift|smux_w[92]       ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[43]                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[88]                          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[90]                          ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[32]                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[88]                          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift|smux_w[93]                          ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift|smux_w[41]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift|smux_w[87]       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift|smux_w[93]       ;
 ; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |FX|CORDIC:cordic|ShiftLeft0                                                                                                                                     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|CORDIC:cordic|ShiftLeft0                                                                                                                                     ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|smux_w[95]                          ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|smux_w[89]                          ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|smux_w[32]                          ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|smux_w[33]                          ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|smux_w[94]                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|smux_w[90]                          ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|smux_w[44]                          ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_aeb:rbarrel_shift|smux_w[86]       ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_aeb:rbarrel_shift|smux_w[30]       ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |FX|CORDIC:cordic|result[15]                                                                                                                                     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_add_sub_res_mag_w2[25]                                                     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_add_sub_res_mag_w2[26]                                                     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|man_add_sub_res_mag_w2[26]                                       ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|result[9]                           ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|result[5]                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|smux_w[89]                          ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|smux_w[35]                          ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_aeb:rbarrel_shift|smux_w[83]       ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_aeb:rbarrel_shift|smux_w[39]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FX|CORDIC:cordic|result[23]                                                                                                                                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_add_sub_res_mag_w2[26]                                                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|man_add_sub_res_mag_w2[25]                                                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|man_add_sub_res_mag_w2[25]                                       ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|result[0]                           ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|result[6]                           ;
+; 5:1                ; 22 bits   ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |FX|CORDIC:cordic|result[9]                                                                                                                                      ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FX|fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_aeb:rbarrel_shift|smux_w[80]       ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|result[2]                           ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FX|fp_adder:addb|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift|result[2]                           ;
@@ -2819,13 +2823,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------+
 ; Parameter Name ; Value ; Type                              ;
 +----------------+-------+-----------------------------------+
-; M              ; 22    ; Signed Integer                    ;
+; M              ; 15    ; Signed Integer                    ;
 ; W              ; 32    ; Signed Integer                    ;
-; FixedW         ; 27    ; Signed Integer                    ;
+; FixedW         ; 28    ; Signed Integer                    ;
 ; EXONENT_BITS   ; 8     ; Signed Integer                    ;
 ; MANTISSA_BITS  ; 23    ; Signed Integer                    ;
 ; INTEGER_BITS   ; 2     ; Signed Integer                    ;
-; FRACTION_BITS  ; 25    ; Signed Integer                    ;
+; FRACTION_BITS  ; 26    ; Signed Integer                    ;
 +----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2955,41 +2959,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 2347                        ;
+; arriav_ff             ; 2270                        ;
 ;     ENA CLR           ; 1927                        ;
 ;     ENA CLR SCLR      ; 19                          ;
 ;     ENA CLR SLD       ; 188                         ;
 ;     SCLR              ; 1                           ;
-;     plain             ; 212                         ;
-; arriav_lcell_comb     ; 4054                        ;
-;     arith             ; 2211                        ;
+;     plain             ; 135                         ;
+; arriav_lcell_comb     ; 3528                        ;
+;     arith             ; 1662                        ;
 ;         0 data inputs ; 41                          ;
-;         1 data inputs ; 470                         ;
-;         2 data inputs ; 501                         ;
-;         3 data inputs ; 1123                        ;
-;         4 data inputs ; 32                          ;
-;         5 data inputs ; 44                          ;
-;     extend            ; 21                          ;
-;         7 data inputs ; 21                          ;
-;     normal            ; 1751                        ;
+;         1 data inputs ; 447                         ;
+;         2 data inputs ; 330                         ;
+;         3 data inputs ; 759                         ;
+;         4 data inputs ; 37                          ;
+;         5 data inputs ; 48                          ;
+;     extend            ; 22                          ;
+;         7 data inputs ; 22                          ;
+;     normal            ; 1772                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 20                          ;
 ;         2 data inputs ; 272                         ;
-;         3 data inputs ; 203                         ;
-;         4 data inputs ; 419                         ;
-;         5 data inputs ; 356                         ;
-;         6 data inputs ; 479                         ;
-;     shared            ; 71                          ;
+;         3 data inputs ; 202                         ;
+;         4 data inputs ; 422                         ;
+;         5 data inputs ; 395                         ;
+;         6 data inputs ; 459                         ;
+;     shared            ; 72                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 49                          ;
+;         2 data inputs ; 50                          ;
 ;         3 data inputs ; 6                           ;
 ;         4 data inputs ; 3                           ;
 ; arriav_mac            ; 5                           ;
 ; boundary_port         ; 387                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 25.50                       ;
-; Average LUT depth     ; 10.21                       ;
+; Average LUT depth     ; 8.44                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2998,7 +3002,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -3008,7 +3012,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 12 08:13:11 2024
+    Info: Processing started: Wed Mar 13 05:59:23 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FX -c FX
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -3068,7 +3072,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file fx.v
 Info (12021): Found 1 design units, including 1 entities, in source file testbench_1.v
     Info (12023): Found entity 1: tb File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/testbench_1.v Line: 2
 Info (12127): Elaborating entity "FX" for the top level hierarchy
-Info (12128): Elaborating entity "fp_multiplier" for hierarchy "fp_multiplier:multa" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 46
+Info (12128): Elaborating entity "fp_multiplier" for hierarchy "fp_multiplier:multa" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 50
 Info (12128): Elaborating entity "fp_multiplier_altfp_mult_tmo" for hierarchy "fp_multiplier:multa|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_mul/fp_multiplier.v Line: 542
 Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "fp_multiplier:multa|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|lpm_add_sub:exp_add_adder" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_mul/fp_multiplier.v Line: 385
 Info (12130): Elaborated megafunction instantiation "fp_multiplier:multa|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|lpm_add_sub:exp_add_adder" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_mul/fp_multiplier.v Line: 385
@@ -3121,7 +3125,7 @@ Info (12133): Instantiated megafunction "fp_multiplier:multa|fp_multiplier_altfp
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_6ct.v
     Info (12023): Found entity 1: mult_6ct File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/db/mult_6ct.v Line: 28
 Info (12128): Elaborating entity "mult_6ct" for hierarchy "fp_multiplier:multa|fp_multiplier_altfp_mult_tmo:fp_multiplier_altfp_mult_tmo_component|lpm_mult:man_product2_mult|mult_6ct:auto_generated" File: d:/quartus18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 376
-Info (12128): Elaborating entity "fp_adder" for hierarchy "fp_adder:adda" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 90
+Info (12128): Elaborating entity "fp_adder" for hierarchy "fp_adder:adda" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 94
 Info (12128): Elaborating entity "fp_adder_altfp_add_sub_50k" for hierarchy "fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_add/fp_adder.v Line: 2647
 Info (12128): Elaborating entity "fp_adder_altbarrel_shift_ltd" for hierarchy "fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_ltd:lbarrel_shift" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_add/fp_adder.v Line: 1325
 Info (12128): Elaborating entity "fp_adder_altbarrel_shift_aeb" for hierarchy "fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|fp_adder_altbarrel_shift_aeb:rbarrel_shift" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_add/fp_adder.v Line: 1330
@@ -3240,7 +3244,7 @@ Info (12133): Instantiated megafunction "fp_adder:adda|fp_adder_altfp_add_sub_50
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_e7g.tdf
     Info (12023): Found entity 1: cmpr_e7g File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/db/cmpr_e7g.tdf Line: 22
 Info (12128): Elaborating entity "cmpr_e7g" for hierarchy "fp_adder:adda|fp_adder_altfp_add_sub_50k:fp_adder_altfp_add_sub_50k_component|lpm_compare:trailing_zeros_limit_comparator|cmpr_e7g:auto_generated" File: d:/quartus18.1/quartus/libraries/megafunctions/lpm_compare.tdf Line: 280
-Info (12128): Elaborating entity "fp_subtractor" for hierarchy "fp_subtractor:sub" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 117
+Info (12128): Elaborating entity "fp_subtractor" for hierarchy "fp_subtractor:sub" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 121
 Info (12128): Elaborating entity "fp_subtractor_altfp_add_sub_61k" for hierarchy "fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_sub/fp_subtractor.v Line: 2647
 Info (12128): Elaborating entity "fp_subtractor_altbarrel_shift_ltd" for hierarchy "fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_ltd:lbarrel_shift" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_sub/fp_subtractor.v Line: 1325
 Info (12128): Elaborating entity "fp_subtractor_altbarrel_shift_aeb" for hierarchy "fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altbarrel_shift_aeb:rbarrel_shift" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_sub/fp_subtractor.v Line: 1330
@@ -3262,18 +3266,18 @@ Info (12128): Elaborating entity "fp_subtractor_altpriority_encoder_f48" for hie
 Info (12128): Elaborating entity "fp_subtractor_altpriority_encoder_v28" for hierarchy "fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altpriority_encoder_e48:trailing_zeros_cnt|fp_subtractor_altpriority_encoder_f48:altpriority_encoder22|fp_subtractor_altpriority_encoder_v28:altpriority_encoder30" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_sub/fp_subtractor.v Line: 672
 Info (12128): Elaborating entity "fp_subtractor_altpriority_encoder_q28" for hierarchy "fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altpriority_encoder_e48:trailing_zeros_cnt|fp_subtractor_altpriority_encoder_f48:altpriority_encoder22|fp_subtractor_altpriority_encoder_v28:altpriority_encoder30|fp_subtractor_altpriority_encoder_q28:altpriority_encoder32" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_sub/fp_subtractor.v Line: 644
 Info (12128): Elaborating entity "fp_subtractor_altpriority_encoder_n28" for hierarchy "fp_subtractor:sub|fp_subtractor_altfp_add_sub_61k:fp_subtractor_altfp_add_sub_61k_component|fp_subtractor_altpriority_encoder_e48:trailing_zeros_cnt|fp_subtractor_altpriority_encoder_f48:altpriority_encoder22|fp_subtractor_altpriority_encoder_v28:altpriority_encoder30|fp_subtractor_altpriority_encoder_q28:altpriority_encoder32|fp_subtractor_altpriority_encoder_n28:altpriority_encoder34" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_sub/fp_subtractor.v Line: 616
-Info (12128): Elaborating entity "CORDIC" for hierarchy "CORDIC:cordic" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 123
+Info (12128): Elaborating entity "CORDIC" for hierarchy "CORDIC:cordic" File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 127
 Warning (10230): Verilog HDL assignment warning at CORDIC.v(163): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 163
 Warning (10764): Verilog HDL warning at CORDIC.v(174): converting signed shift amount to unsigned File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 174
 Warning (10764): Verilog HDL warning at CORDIC.v(179): converting signed shift amount to unsigned File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 179
 Warning (10230): Verilog HDL assignment warning at CORDIC.v(203): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 203
 Warning (10230): Verilog HDL assignment warning at CORDIC.v(206): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 206
+Warning (10230): Verilog HDL assignment warning at CORDIC.v(209): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 209
 Warning (10230): Verilog HDL assignment warning at CORDIC.v(224): truncated value with size 32 to match size of target (8) File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v Line: 224
 Info (286030): Timing-Driven Synthesis is running
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "multar[31]" is stuck at GND File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 7
-    Warning (13410): Pin "cordicr[25]" is stuck at VCC File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 15
     Warning (13410): Pin "cordicr[26]" is stuck at VCC File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 15
     Warning (13410): Pin "cordicr[27]" is stuck at VCC File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 15
     Warning (13410): Pin "cordicr[28]" is stuck at VCC File: C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v Line: 15
@@ -3283,16 +3287,16 @@ Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/output_files/FX.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5385 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4858 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 320 output pins
-    Info (21061): Implemented 4993 logic cells
+    Info (21061): Implemented 4466 logic cells
     Info (21062): Implemented 5 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 4911 megabytes
-    Info: Processing ended: Tue Mar 12 08:13:31 2024
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Processing ended: Wed Mar 13 05:59:41 2024
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+

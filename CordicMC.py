@@ -89,7 +89,7 @@ angles = [
 
 def cordic_cos(angle):
     iterations=15
-    w=27
+    w=28
     x[0]=backconversion("00100110110111010011101101")
     y[0]=0
     z[0]=changeNumToWidth(angle,w)
@@ -98,11 +98,11 @@ def cordic_cos(angle):
         if z[i]>=0:
             x[i+1]=changeNumToWidth(x[i]-y[i]*(2**-i),w)
             y[i+1]=changeNumToWidth(y[i]+x[i]*(2**-i),w)
-            z[i+1]=changeNumToWidth(z[i]-backconversion(angles[i]),w)
+            z[i+1]=changeNumToWidth(z[i]-backconversion(e[i]),w)
         else:
             x[i+1]=changeNumToWidth(x[i]+y[i]*(2**-i),w)
             y[i+1]=changeNumToWidth(y[i]-x[i]*(2**-i),w)
-            z[i+1]=changeNumToWidth(z[i]+backconversion(angles[i]),w)
+            z[i+1]=changeNumToWidth(z[i]+backconversion(e[i]),w)
     # CORDIC block implementation (replace with your own code)
     # This is a placeholder function that returns the cosine of the angle
     return changeNumToWidth(x[iterations-1],w)

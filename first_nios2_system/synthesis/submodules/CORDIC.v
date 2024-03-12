@@ -5,13 +5,13 @@
 // Interface
 
 module CORDIC #(
-	parameter M =22,
+	parameter M =15,
 	parameter W=32,
-	parameter FixedW=27,
+	parameter FixedW=28,
 	parameter EXONENT_BITS = 8,
 	parameter MANTISSA_BITS = 23,
 	parameter INTEGER_BITS = 2,
-	parameter FRACTION_BITS = 25
+	parameter FRACTION_BITS = 26
 
 	)(
 	input [W-1:0] dataa, //this input is float 
@@ -107,12 +107,12 @@ initial begin
 
 	e[0]=27'b001100100100001111110110100;
 	e[1]=27'b000111011010110001100111000;
-	e[2]=27'b000011111010110110111010110;
-	e[3]=27'b000001111111010101101110100;
-	e[4]=27'b000000111111111010101011010;
+	e[2]=27'b000011111010110110111010111;
+	e[3]=27'b000001111111010101101110101;
+	e[4]=27'b000000111111111010101011011;
 	
 	e[5]=27'b000000011111111111010101010;
-	e[6]=27'b000000001111111111111010100;
+	e[6]=27'b000000001111111111111010101;
 	e[7]=27'b000000000111111111111111010;
 	e[8]=27'b000000000011111111111111101;
 	e[9]=27'b000000000001111111111111110;
@@ -122,13 +122,13 @@ initial begin
 	e[12]=27'b000000000000001111111111111;
 	e[13]=27'b000000000000000111111111111;
 	e[14]=27'b000000000000000011111111111;
-	e[15]=27'b000000000000000001111111111;
-	e[16]=27'b000000000000000000111111111;
-	e[17]=27'b000000000000000000011111111;
-	e[18]=27'b000000000000000000001111111;
-	e[19]=27'b000000000000000000000111111;
-   e[20]=27'b000000000000000000000011111;
-   e[21]=27'b000000000000000000000001111;
+//	e[15]=27'b000000000000000001111111111;
+//	e[16]=27'b000000000000000000111111111;
+//	e[17]=27'b000000000000000000011111111;
+//	e[18]=27'b000000000000000000001111111;
+//	e[19]=27'b000000000000000000000111111;
+//   e[20]=27'b000000000000000000000011111;
+//   e[21]=27'b000000000000000000000001111;
 //	e[12]=32'b00111001011111111111111111010101;
 //	e[13]=32'b00111000111111111111111111010101;
 //	e[14]=32'b00111000011111111111111111010101;
@@ -167,19 +167,19 @@ wire sign;
   if (shift_amount >= 24) begin
 		// Shift left beyond the integer bits
 //		fixed_in = {sign, fixed_mantissa, 7'b0};
-		fixed_in = {sign, fixed_mantissa, 2'b0};
+		fixed_in = {sign, fixed_mantissa, 3'b0};
   end else if (shift_amount >= 0) begin
 		// Shift left within the integer bits
 //		fixed_in = {sign, fixed_mantissa << shift_amount, 7'b0};
-		fixed_in = {sign, fixed_mantissa << shift_amount, 2'b0};
+		fixed_in = {sign, fixed_mantissa << shift_amount, 3'b0};
   end else begin
 		// Shift right within the fractional bits
 		if (shift_amount >= -30) begin
 //			 fixed_in = {sign, fixed_mantissa >> -shift_amount,7'b0};
-			 fixed_in = {sign, fixed_mantissa >> -shift_amount,2'b0};
+			 fixed_in = {sign, fixed_mantissa >> -shift_amount,3'b0};
 		end else begin
 //			 fixed_in = {sign, 31'b0};
-			 fixed_in = {sign, 26'b0};
+			 fixed_in = {sign, 27'b0};
 		end
   end
   
@@ -199,15 +199,15 @@ wire sign;
  assign fixedpoint_out=x[M-1];
  always @(*) begin   //from fixed point to floating point output
     if (int_part == 0) begin
-            if (frac_part[24]) begin
+            if (frac_part[25]) begin
                 exponent = 127 - 1;
+                mantissa = frac_part[25:3]<<<1;
+            end else if (frac_part[24]) begin
+                exponent = 127 - 2;
                 mantissa = frac_part[24:2]<<<1;
             end else if (frac_part[23]) begin
-                exponent = 127 - 2;
+                exponent = 127 - 3;
                 mantissa = frac_part[23:1]<<<1;
-//            end else if (frac_part[27]) begin
-//                exponent = 127 - 3;
-//                mantissa = frac_part[26:4];
 //            end else if (frac_part[26]) begin
 //                exponent = 127 - 4;
 //                mantissa = frac_part[25:3];
@@ -221,12 +221,12 @@ wire sign;
 //                exponent = 127 - 7;
 //                mantissa = frac_part[22:0];
             end else begin
-                exponent = 127-3;
+                exponent = 127-4;
                 mantissa = frac_part[22:0]<<<1;
             end
         end else begin
-            exponent = 127 + int_part;
-            mantissa = frac_part[24:2];
+            exponent = 127 ;
+            mantissa = frac_part[25:3];
         end
 	 
 	 
@@ -239,7 +239,7 @@ wire sign;
 	
 	always @(posedge clk) begin
 
-			x[0]<=27'b001001101101110100111011010;
+			x[0]<=28'b0010011011011101001110110100;
 			y[0]<=0;
 			z[0]<= fixed_in;
 
