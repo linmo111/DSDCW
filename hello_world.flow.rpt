@@ -1,5 +1,5 @@
 Flow report for hello_world
-Thu Mar 14 00:10:13 2024
+Thu Mar 14 00:32:44 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,19 +40,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Mar 14 00:09:54 2024       ;
+; Flow Status                     ; Successful - Thu Mar 14 00:32:25 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; hello_world                                 ;
 ; Top-level Entity Name           ; hello_world                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 4,360 / 32,070 ( 14 % )                     ;
-; Total registers                 ; 4830                                        ;
+; Logic utilization (in ALMs)     ; 4,459 / 32,070 ( 14 % )                     ;
+; Total registers                 ; 4956                                        ;
 ; Total pins                      ; 47 / 457 ( 10 % )                           ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 91,741 / 4,065,280 ( 2 % )                  ;
-; Total DSP Blocks                ; 8 / 87 ( 9 % )                              ;
+; Total block memory bits         ; 91,750 / 4,065,280 ( 2 % )                  ;
+; Total DSP Blocks                ; 9 / 87 ( 10 % )                             ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/14/2024 00:06:39 ;
+; Start date & time ; 03/14/2024 00:28:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hello_world         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                                                         ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 224391400900550.171034599913192                                                               ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 224391400900550.171034733804756                                                               ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                            ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; IP/fixed_mul/lpm_1.bsf                                                                        ; --            ; --          ; --         ;
@@ -124,11 +124,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:17     ; 1.3                     ; 5186 MB             ; 00:02:02                           ;
-; Fitter               ; 00:01:42     ; 1.3                     ; 7062 MB             ; 00:04:34                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4910 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:18     ; 2.4                     ; 5444 MB             ; 00:00:39                           ;
-; Total                ; 00:03:25     ; --                      ; --                  ; 00:07:23                           ;
+; Analysis & Synthesis ; 00:01:20     ; 1.3                     ; 5198 MB             ; 00:01:59                           ;
+; Fitter               ; 00:01:47     ; 1.3                     ; 7056 MB             ; 00:04:50                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4917 MB             ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:18     ; 2.4                     ; 5451 MB             ; 00:00:40                           ;
+; Total                ; 00:03:35     ; --                      ; --                  ; 00:07:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -91,7 +91,7 @@ module FX (
 	 fp_adder addb ( // fx1+fx
         .clock(clk),
         .dataa(multb_res),
-        .datab(datab),
+        .datab(multe_res),
         .clk_en(clk_en),
         .aclr(rst),
         .result(addb_res)

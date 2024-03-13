@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Mar 13 23:36:38 2024
+Analysis & Synthesis Status : Successful - Thu Mar 14 00:27:33 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FX
 Top-level Entity Name : FX
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2270
+Total registers : 2271
 Total pins : 387
 Total virtual pins : 0
 Total block memory bits : 0

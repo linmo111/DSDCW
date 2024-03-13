@@ -1,40 +1,9 @@
-00:19:49 **** Incremental Build of configuration Nios II for project ttt ****
+01:01:13 **** Incremental Build of configuration Nios II for project ttt ****
 make all 
 Info: Building ../ttt_bsp/
 D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
 [BSP build complete]
-Info: Compiling hello_world.c to obj/default/hello_world.o
-nios2-elf-gcc -xc -MP -MMD -c -I../ttt_bsp//HAL/inc -I../ttt_bsp/ -I../ttt_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
-hello_world.c:30:0: warning: "step" redefined
- #define step 1/1024.0
- ^
-hello_world.c:27:0: note: this is the location of the previous definition
- #define step 1/8.0
- ^
-hello_world.c:31:0: warning: "N" redefined
- #define N 261121
- ^
-hello_world.c:28:0: note: this is the location of the previous definition
- #define N 2041
- ^
-hello_world.c: In function 'main':
-hello_world.c:76:4: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
-    alt_putstr("hello");
-    ^
-hello_world.c:88:16: warning: implicit declaration of function 'times' [-Wimplicit-function-declaration]
-      exec_t1 = times(NULL); // get system time before starting the process
-                ^
-hello_world.c:93:9: warning: unused variable 'j' [-Wunused-variable]
-     int j;
-         ^
-Info: Linking ttt.elf
-nios2-elf-g++  -T'../ttt_bsp//linker.x' -msys-crt0='../ttt_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../ttt_bsp/   -Wl,-Map=ttt.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o ttt.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert ttt.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1710346013 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../first_nios2_system.sopcinfo
-Info: (ttt.elf) 75 KBytes program size (code + initialized data).
-Info:           8109 KBytes free for stack + heap.
-Info: Creating ttt.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source ttt.elf >ttt.objdump
 [ttt build complete]
 
-00:19:50 Build Finished (took 1s.554ms)
+01:01:14 Build Finished (took 648ms)
 
