@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "oDRAM_DQM[0]",
+					"strict" : false
+				},
+				{
 					"name" : "oDRAM_CAS_N",
 					"strict" : false
 				},
@@ -77,10 +81,6 @@
 				},
 				{
 					"name" : "oDRAM_DQM[1]",
-					"strict" : false
-				},
-				{
-					"name" : "oDRAM_DQM[0]",
 					"strict" : false
 				},
 				{

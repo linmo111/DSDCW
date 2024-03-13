@@ -5,10 +5,10 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC {C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v}
 vlog -vlog01compat -work work +incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_sub {C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_sub/fp_subtractor.v}
 vlog -vlog01compat -work work +incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_mul {C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_mul/fp_multiplier.v}
 vlog -vlog01compat -work work +incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_add {C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/fp_add/fp_adder.v}
-vlog -vlog01compat -work work +incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC {C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/CORDIC/CORDIC.v}
 vlog -vlog01compat -work work +incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX {C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/FX.v}
 vlog -vlog01compat -work work +incdir+C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/db {C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/IP/FX/db/mult_6ct.v}
 

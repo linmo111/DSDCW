@@ -17,22 +17,6 @@
          type = "int";
       }
    }
-   element cordicMulti_0
-   {
-      datum _sortIndex
-      {
-         value = "9";
-         type = "int";
-      }
-   }
-   element cordic_0
-   {
-      datum _sortIndex
-      {
-         value = "8";
-         type = "int";
-      }
-   }
    element cpu
    {
       datum _sortIndex
@@ -289,11 +273,19 @@
          type = "String";
       }
    }
+   element first_nios2_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
    element fx_0
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "8";
          type = "int";
       }
    }
@@ -435,23 +427,6 @@
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
- </module>
- <module name="cordicMulti_0" kind="cordicMulti" version="1.0" enabled="0">
-  <parameter name="EXONENT_BITS" value="8" />
-  <parameter name="FRACTION_BITS" value="26" />
-  <parameter name="FixedW" value="28" />
-  <parameter name="INTEGER_BITS" value="2" />
-  <parameter name="M" value="15" />
-  <parameter name="MANTISSA_BITS" value="23" />
-  <parameter name="W" value="32" />
- </module>
- <module name="cordic_0" kind="cordic" version="1.0" enabled="0">
-  <parameter name="EXONENT_BITS" value="8" />
-  <parameter name="FRACTION_BITS" value="30" />
-  <parameter name="INTEGER_BITS" value="2" />
-  <parameter name="M" value="20" />
-  <parameter name="MANTISSA_BITS" value="23" />
-  <parameter name="W" value="32" />
  </module>
  <module name="cpu" kind="altera_nios2_gen2" version="18.1" enabled="1">
   <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
@@ -852,26 +827,8 @@
    kind="nios_custom_instruction"
    version="18.1"
    start="cpu.custom_instruction_master"
-   end="cordic_0.nios_custom_instruction_slave">
-  <parameter name="CIName" value="cordic_0" />
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0" />
- </connection>
- <connection
-   kind="nios_custom_instruction"
-   version="18.1"
-   start="cpu.custom_instruction_master"
    end="fx_0.nios_custom_instruction_slave">
   <parameter name="CIName" value="fx_0" />
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0" />
- </connection>
- <connection
-   kind="nios_custom_instruction"
-   version="18.1"
-   start="cpu.custom_instruction_master"
-   end="cordicMulti_0.nios_custom_instruction_slave_1">
-  <parameter name="CIName" value="cordicmulti_0" />
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0" />
  </connection>

@@ -104,10 +104,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "result[25]",
-					"strict" : false
-				},
-				{
 					"name" : "result[31]",
 					"strict" : false
 				},

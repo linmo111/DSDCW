@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2024-3-13 6:07:17</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1710281237894</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2024-3-13 22:19:25</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1710339565773</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\linmo\Desktop\DSD\test\system_template_de1_soc\software\task7final_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\first_nios2_system.sopcinfo</SopcDesignFile>

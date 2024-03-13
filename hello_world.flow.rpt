@@ -1,5 +1,5 @@
 Flow report for hello_world
-Wed Mar 13 06:04:57 2024
+Wed Mar 13 22:13:06 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Mar 13 06:04:39 2024       ;
+; Flow Status                     ; Successful - Wed Mar 13 22:12:47 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; hello_world                                 ;
 ; Top-level Entity Name           ; hello_world                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 3,710 / 32,070 ( 12 % )                     ;
-; Total registers                 ; 4681                                        ;
+; Logic utilization (in ALMs)     ; 3,707 / 32,070 ( 12 % )                     ;
+; Total registers                 ; 4663                                        ;
 ; Total pins                      ; 47 / 457 ( 10 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 91,741 / 4,065,280 ( 2 % )                  ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/13/2024 06:01:06 ;
+; Start date & time ; 03/13/2024 22:09:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hello_world         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                                                         ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 224391400900550.171028086541308                                                               ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 224391400900550.171033896107584                                                               ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                            ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; IP/fixed_mul/lpm_1.bsf                                                                        ; --            ; --          ; --         ;
@@ -124,11 +124,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:21     ; 1.3                     ; 5181 MB             ; 00:02:09                           ;
-; Fitter               ; 00:01:56     ; 1.3                     ; 7066 MB             ; 00:04:51                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4910 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:17     ; 2.3                     ; 5436 MB             ; 00:00:36                           ;
-; Total                ; 00:03:41     ; --                      ; --                  ; 00:07:43                           ;
+; Analysis & Synthesis ; 00:01:31     ; 1.3                     ; 5176 MB             ; 00:02:25                           ;
+; Fitter               ; 00:01:39     ; 1.3                     ; 7056 MB             ; 00:04:23                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4897 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:18     ; 2.3                     ; 5435 MB             ; 00:00:37                           ;
+; Total                ; 00:03:35     ; --                      ; --                  ; 00:07:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

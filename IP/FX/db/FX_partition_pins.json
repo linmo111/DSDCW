@@ -1124,10 +1124,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "cordicr[25]",
-					"strict" : false
-				},
-				{
 					"name" : "cordicr[31]",
 					"strict" : false
 				},

@@ -150,12 +150,13 @@ num_iterations = 1000
 num_angles = 100
 
 # Run the Monte Carlo error test
-print("running")
-# mse_cordic= monte_carlo_error_test(num_iterations, num_angles)
-mean_error, confidence_interval = monte_carlo_error_test(num_iterations, num_angles)
-print(f"Mean error: {mean_error}")
-print(f"95% Confidence Interval: {confidence_interval}")
-
+# print("running")
+# # mse_cordic= monte_carlo_error_test(num_iterations, num_angles)
+# mean_error, confidence_interval = monte_carlo_error_test(num_iterations, num_angles)
+# print(f"Mean error: {mean_error}")
+# print(f"95% Confidence Interval: {confidence_interval}")
+print(conversion(0.607252935,28))
+print(backconversion("10000110000010101001001000"))
 # print(f"Mean Squared Error (MSE) - CORDIC: {mse_cordic}")
 # print(conversion(0.001953123,27))
 # print(f"Mean Squared Error (MSE) - Double Precision: {mse_double}")
