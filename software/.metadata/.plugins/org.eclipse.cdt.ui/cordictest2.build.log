@@ -1,9 +1,9 @@
-03:27:10 **** Incremental Build of configuration Nios II for project cordictest2 ****
+00:12:38 **** Incremental Build of configuration Nios II for project cordictest2 ****
 make all 
 Info: Building ../cordictest2_bsp/
 D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
 [BSP build complete]
 [cordictest2 build complete]
 
-03:27:11 Build Finished (took 777ms)
+00:12:39 Build Finished (took 668ms)
 

@@ -79,7 +79,7 @@ IT=22
 
 
 angles = [
-    conversion(math.atan(2**-i),27)  for i in range(22)
+    conversion(math.atan(2**-i),28)  for i in range(22)
 ]
 
 
@@ -89,7 +89,7 @@ angles = [
 
 def cordic_cos(angle):
     iterations=15
-    w=27
+    w=28
     x[0]=backconversion("00100110110111010011101101")
     y[0]=0
     z[0]=changeNumToWidth(angle,w)
@@ -150,12 +150,13 @@ num_iterations = 1000
 num_angles = 100
 
 # Run the Monte Carlo error test
-print("running")
-# mse_cordic= monte_carlo_error_test(num_iterations, num_angles)
-mean_error, confidence_interval = monte_carlo_error_test(num_iterations, num_angles)
-print(f"Mean error: {mean_error}")
-print(f"95% Confidence Interval: {confidence_interval}")
+# print("running")
+# # mse_cordic= monte_carlo_error_test(num_iterations, num_angles)
+# mean_error, confidence_interval = monte_carlo_error_test(num_iterations, num_angles)
+# print(f"Mean error: {mean_error}")
+# print(f"95% Confidence Interval: {confidence_interval}")
 
 # print(f"Mean Squared Error (MSE) - CORDIC: {mse_cordic}")
-# print(conversion(0.001953123,27))
+print(backconversion("0011110111010010000011010001"))
+print(backconversion("0001000011000001010100100100"))
 # print(f"Mean Squared Error (MSE) - Double Precision: {mse_double}")

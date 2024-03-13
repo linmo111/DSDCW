@@ -10,6 +10,8 @@ Progress: Adding cordic_0 [cordic 1.0]
 Progress: Parameterizing module cordic_0
 Progress: Adding cpu [altera_nios2_gen2 18.1]
 Progress: Parameterizing module cpu
+Progress: Adding fx_0 [fx 1.0]
+Progress: Parameterizing module fx_0
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module jtag_uart
 Progress: Adding led_pio [altera_avalon_pio 18.1]
@@ -45,6 +47,8 @@ Progress: Adding cordic_0 [cordic 1.0]
 Progress: Parameterizing module cordic_0
 Progress: Adding cpu [altera_nios2_gen2 18.1]
 Progress: Parameterizing module cpu
+Progress: Adding fx_0 [fx 1.0]
+Progress: Parameterizing module fx_0
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module jtag_uart
 Progress: Adding led_pio [altera_avalon_pio 18.1]
@@ -72,20 +76,21 @@ Warning: first_nios2_system: "No matching role found for cpu_custom_instruction_
 Warning: first_nios2_system: "No matching role found for cpu_custom_instruction_master_multi_slave_translator0:ci_master:ci_master_clken (clk_en)"
 Info: cordicMulti_0: "first_nios2_system" instantiated cordicMulti "cordicMulti_0"
 Info: cpu: "first_nios2_system" instantiated altera_nios2_gen2 "cpu"
+Info: fx_0: "first_nios2_system" instantiated fx "fx_0"
 Info: jtag_uart: Starting RTL generation for module 'first_nios2_system_jtag_uart'
-Info: jtag_uart:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=first_nios2_system_jtag_uart --dir=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0004_jtag_uart_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0004_jtag_uart_gen//first_nios2_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=first_nios2_system_jtag_uart --dir=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0004_jtag_uart_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0004_jtag_uart_gen//first_nios2_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'first_nios2_system_jtag_uart'
 Info: jtag_uart: "first_nios2_system" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: led_pio: Starting RTL generation for module 'first_nios2_system_led_pio'
-Info: led_pio:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=first_nios2_system_led_pio --dir=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0005_led_pio_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0005_led_pio_gen//first_nios2_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=first_nios2_system_led_pio --dir=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0005_led_pio_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0005_led_pio_gen//first_nios2_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: led_pio: Done RTL generation for module 'first_nios2_system_led_pio'
 Info: led_pio: "first_nios2_system" instantiated altera_avalon_pio "led_pio"
 Info: sdram: Starting RTL generation for module 'first_nios2_system_sdram'
-Info: sdram:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=first_nios2_system_sdram --dir=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0006_sdram_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0006_sdram_gen//first_nios2_system_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram:   Generation command is [exec D:/quartus18.1/quartus/bin64/perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64/perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=first_nios2_system_sdram --dir=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0006_sdram_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0006_sdram_gen//first_nios2_system_sdram_component_configuration.pl  --do_build_sim=0  ]
 Info: sdram: Done RTL generation for module 'first_nios2_system_sdram'
 Info: sdram: "first_nios2_system" instantiated altera_avalon_new_sdram_controller "sdram"
 Info: sys_clk_timer: Starting RTL generation for module 'first_nios2_system_sys_clk_timer'
-Info: sys_clk_timer:   Generation command is [exec D:/quartus18.1/quartus/bin64//perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64//perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=first_nios2_system_sys_clk_timer --dir=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0007_sys_clk_timer_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0007_sys_clk_timer_gen//first_nios2_system_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: sys_clk_timer:   Generation command is [exec D:/quartus18.1/quartus/bin64//perl/bin/perl.exe -I D:/quartus18.1/quartus/bin64//perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- D:/quartus18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=first_nios2_system_sys_clk_timer --dir=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0007_sys_clk_timer_gen/ --quartus_dir=D:/quartus18.1/quartus --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0007_sys_clk_timer_gen//first_nios2_system_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]
 Info: sys_clk_timer: Done RTL generation for module 'first_nios2_system_sys_clk_timer'
 Info: sys_clk_timer: "first_nios2_system" instantiated altera_avalon_timer "sys_clk_timer"
 Info: sysid: "first_nios2_system" instantiated altera_avalon_sysid_qsys "sysid"
@@ -102,31 +107,31 @@ Info: mm_interconnect_0: "first_nios2_system" instantiated altera_mm_interconnec
 Info: irq_mapper: "first_nios2_system" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "first_nios2_system" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'first_nios2_system_cpu_cpu'
-Info: cpu:   Generation command is [exec D:/quartus18.1/quartus/bin64//eperlcmd.exe -I D:/quartus18.1/quartus/bin64//perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=first_nios2_system_cpu_cpu --dir=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0014_cpu_gen/ --quartus_bindir=D:/quartus18.1/quartus/bin64/ --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9792_4097599959330136102.dir/0014_cpu_gen//first_nios2_system_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2024.03.11 03:57:06 (*) Starting Nios II generation
-Info: cpu: # 2024.03.11 03:57:06 (*)   Checking for plaintext license.
-Info: cpu: # 2024.03.11 03:57:07 (*)   Couldn't query license setup in Quartus directory D:/quartus18.1/quartus/bin64/
-Info: cpu: # 2024.03.11 03:57:07 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2024.03.11 03:57:07 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2024.03.11 03:57:07 (*)   Plaintext license not found.
-Info: cpu: # 2024.03.11 03:57:07 (*)   Checking for encrypted license (non-evaluation).
-Info: cpu: # 2024.03.11 03:57:07 (*)   Couldn't query license setup in Quartus directory D:/quartus18.1/quartus/bin64/
-Info: cpu: # 2024.03.11 03:57:07 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2024.03.11 03:57:07 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2024.03.11 03:57:07 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
-Info: cpu: # 2024.03.11 03:57:07 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2024.03.11 03:57:07 (*)   Creating all objects for CPU
-Info: cpu: # 2024.03.11 03:57:07 (*)     Testbench
-Info: cpu: # 2024.03.11 03:57:07 (*)     Instruction decoding
-Info: cpu: # 2024.03.11 03:57:07 (*)       Instruction fields
-Info: cpu: # 2024.03.11 03:57:08 (*)       Instruction decodes
-Info: cpu: # 2024.03.11 03:57:08 (*)       Signals for RTL simulation waveforms
-Info: cpu: # 2024.03.11 03:57:08 (*)       Instruction controls
-Info: cpu: # 2024.03.11 03:57:08 (*)     Pipeline frontend
-Info: cpu: # 2024.03.11 03:57:08 (*)     Pipeline backend
-Info: cpu: # 2024.03.11 03:57:10 (*)   Generating RTL from CPU objects
-Info: cpu: # 2024.03.11 03:57:11 (*)   Creating encrypted RTL
-Info: cpu: # 2024.03.11 03:57:12 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec D:/quartus18.1/quartus/bin64//eperlcmd.exe -I D:/quartus18.1/quartus/bin64//perl/lib -I D:/quartus18.1/quartus/sopc_builder/bin/europa -I D:/quartus18.1/quartus/sopc_builder/bin/perl_lib -I D:/quartus18.1/quartus/sopc_builder/bin -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/quartus18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=first_nios2_system_cpu_cpu --dir=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0014_cpu_gen/ --quartus_bindir=D:/quartus18.1/quartus/bin64/ --verilog --config=C:/Users/linmo/AppData/Local/Temp/alt9795_9111297541776237716.dir/0014_cpu_gen//first_nios2_system_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2024.03.14 00:04:20 (*) Starting Nios II generation
+Info: cpu: # 2024.03.14 00:04:20 (*)   Checking for plaintext license.
+Info: cpu: # 2024.03.14 00:04:21 (*)   Couldn't query license setup in Quartus directory D:/quartus18.1/quartus/bin64/
+Info: cpu: # 2024.03.14 00:04:21 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2024.03.14 00:04:21 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2024.03.14 00:04:21 (*)   Plaintext license not found.
+Info: cpu: # 2024.03.14 00:04:21 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2024.03.14 00:04:21 (*)   Couldn't query license setup in Quartus directory D:/quartus18.1/quartus/bin64/
+Info: cpu: # 2024.03.14 00:04:21 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2024.03.14 00:04:21 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2024.03.14 00:04:21 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2024.03.14 00:04:21 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.03.14 00:04:21 (*)   Creating all objects for CPU
+Info: cpu: # 2024.03.14 00:04:21 (*)     Testbench
+Info: cpu: # 2024.03.14 00:04:21 (*)     Instruction decoding
+Info: cpu: # 2024.03.14 00:04:21 (*)       Instruction fields
+Info: cpu: # 2024.03.14 00:04:21 (*)       Instruction decodes
+Info: cpu: # 2024.03.14 00:04:21 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2024.03.14 00:04:22 (*)       Instruction controls
+Info: cpu: # 2024.03.14 00:04:22 (*)     Pipeline frontend
+Info: cpu: # 2024.03.14 00:04:22 (*)     Pipeline backend
+Info: cpu: # 2024.03.14 00:04:23 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.03.14 00:04:24 (*)   Creating encrypted RTL
+Info: cpu: # 2024.03.14 00:04:25 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'first_nios2_system_cpu_cpu'
 Info: cpu: "cpu" instantiated altera_nios2_gen2_unit "cpu"
 Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
@@ -161,6 +166,6 @@ Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapt
 Info: avalon_st_adapter_005: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_005"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_005" instantiated error_adapter "error_adapter_0"
-Info: first_nios2_system: Done "first_nios2_system" with 40 modules, 67 files
+Info: first_nios2_system: Done "first_nios2_system" with 41 modules, 68 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

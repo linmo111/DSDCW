@@ -1,158 +1,65 @@
-04:06:02 **** Incremental Build of configuration Nios II for project cordictest2 ****
+23:46:35 **** Build of configuration Nios II for project ttt ****
 make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
+Info: Building ../ttt_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
 [BSP build complete]
-[cordictest2 build complete]
-04:08:02 **** Incremental Build of configuration Nios II for project cordictest2 ****
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../ttt_bsp//HAL/inc -I../ttt_bsp/ -I../ttt_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:27:0: warning: "step" redefined
+ #define step 1/1024.0
+ ^
+hello_world.c:24:0: note: this is the location of the previous definition
+ #define step 1/8.0
+ ^
+hello_world.c:28:0: warning: "N" redefined
+ #define N 261121
+ ^
+hello_world.c:25:0: note: this is the location of the previous definition
+ #define N 2041
+ ^
+hello_world.c: In function 'main':
+hello_world.c:61:4: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+    alt_putstr("hello");
+    ^
+hello_world.c:73:16: warning: implicit declaration of function 'times' [-Wimplicit-function-declaration]
+      exec_t1 = times(NULL); // get system time before starting the process
+                ^
+hello_world.c:78:9: warning: unused variable 'j' [-Wunused-variable]
+     int j;
+         ^
+Info: Linking ttt.elf
+nios2-elf-g++  -T'../ttt_bsp//linker.x' -msys-crt0='../ttt_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../ttt_bsp/   -Wl,-Map=ttt.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o ttt.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert ttt.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1710344406 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../first_nios2_system.sopcinfo
+Info: (ttt.elf) 71 KBytes program size (code + initialized data).
+Info:           8114 KBytes free for stack + heap.
+Info: Creating ttt.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source ttt.elf >ttt.objdump
+[ttt build complete]
+23:46:46 **** Build of configuration Nios II for project ttt ****
 make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
+Info: Building ../ttt_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
 [BSP build complete]
-[cordictest2 build complete]
-04:08:50 **** Incremental Build of configuration Nios II for project cordictest2 ****
+[ttt build complete]
+23:47:05 **** Incremental Build of configuration Nios II for project ttt ****
 make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
+Info: Building ../ttt_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
 [BSP build complete]
-[cordictest2 build complete]
-04:23:26 **** Incremental Build of configuration Nios II for project cordictest2 ****
+[ttt build complete]
+23:47:33 **** Incremental Build of configuration Nios II for project ttt ****
 make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
-Compiling alt_alarm_start.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
-Compiling alt_busy_sleep.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
-Compiling alt_close.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
-Compiling alt_dcache_flush.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
-Compiling alt_dcache_flush_all.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
-Compiling alt_dcache_flush_no_writeback.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
-Compiling alt_dev.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
-Compiling alt_dma_rxchan_open.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
-Compiling alt_dma_txchan_open.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
-Compiling alt_ecc_fatal_exception.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
-Compiling alt_exception_entry.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
-Compiling alt_exit.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
-Compiling alt_fcntl.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
-Compiling alt_fd_lock.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
-Compiling alt_fd_unlock.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
-Compiling alt_find_dev.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
-Compiling alt_find_file.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
-Compiling alt_flash_dev.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
-Compiling alt_fs_reg.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
-Compiling alt_fstat.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
-Compiling alt_get_fd.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
-Compiling alt_gmon.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
-Compiling alt_icache_flush.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
-Compiling alt_icache_flush_all.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
-Compiling alt_iic.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
-Compiling alt_iic_isr_register.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
-Compiling alt_instruction_exception_entry.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
-Compiling alt_instruction_exception_register.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
-Compiling alt_io_redirect.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
-Compiling alt_ioctl.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
-Compiling alt_irq_entry.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
-Compiling alt_irq_handler.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
-Compiling alt_irq_register.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
-Compiling alt_irq_vars.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
-Compiling alt_isatty.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
-Compiling alt_lseek.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
-Compiling alt_main.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
-Compiling alt_open.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
-Compiling alt_read.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
-Compiling alt_release_fd.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
-Compiling alt_remap_cached.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
-Compiling alt_remap_uncached.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
-Compiling alt_sbrk.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
-Compiling alt_software_exception.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
-Compiling alt_tick.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
-Compiling alt_uncached_free.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
-Compiling alt_uncached_malloc.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
-Compiling alt_write.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
-Compiling altera_nios2_gen2_irq.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
-Compiling crt0.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
-Compiling alt_sys_init.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
-Compiling altera_avalon_jtag_uart_fd.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_fd.o drivers/src/altera_avalon_jtag_uart_fd.c
-Compiling altera_avalon_jtag_uart_init.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_init.o drivers/src/altera_avalon_jtag_uart_init.c
-Compiling altera_avalon_jtag_uart_ioctl.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o drivers/src/altera_avalon_jtag_uart_ioctl.c
-Compiling altera_avalon_jtag_uart_read.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_read.o drivers/src/altera_avalon_jtag_uart_read.c
-Compiling altera_avalon_jtag_uart_write.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
-Compiling altera_avalon_sysid_qsys.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
-Compiling altera_avalon_timer_sc.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
-Compiling altera_avalon_timer_ts.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
-Compiling altera_avalon_timer_vars.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
-Creating libhal_bsp.a...
-rm -f -f libhal_bsp.a
-nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
+Info: Building ../ttt_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
 [BSP build complete]
-Info: Linking cordictest2.elf
-nios2-elf-g++  -T'../cordictest2_bsp//linker.x' -msys-crt0='../cordictest2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cordictest2_bsp/   -Wl,-Map=cordictest2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o cordictest2.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1709929128 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
-Info: (cordictest2.elf) 68 KBytes program size (code + initialized data).
-Info:                   8116 KBytes free for stack + heap.
-Info: Creating cordictest2.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source cordictest2.elf >cordictest2.objdump
-[cordictest2 build complete]
-05:10:35 **** Incremental Build of configuration Nios II for project cordictest2 ****
+[ttt build complete]
+23:47:57 **** Incremental Build of configuration Nios II for project ttt ****
+make all 
+Info: Building ../ttt_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
+[BSP build complete]
+[ttt build complete]
+23:54:59 **** Build of configuration Nios II for project cordictest2 ****
 make all 
 Info: Building ../cordictest2_bsp/
 D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
@@ -282,19 +189,31 @@ nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_bus
 [BSP build complete]
 Info: Linking cordictest2.elf
 nios2-elf-g++  -T'../cordictest2_bsp//linker.x' -msys-crt0='../cordictest2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cordictest2_bsp/   -Wl,-Map=cordictest2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o cordictest2.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1709932021 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
-Info: (cordictest2.elf) 68 KBytes program size (code + initialized data).
-Info:                   8116 KBytes free for stack + heap.
+nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1710345042 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
+Info: (cordictest2.elf) 70 KBytes program size (code + initialized data).
+Info:                   8115 KBytes free for stack + heap.
 Info: Creating cordictest2.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source cordictest2.elf >cordictest2.objdump
 [cordictest2 build complete]
-05:11:30 **** Incremental Build of configuration Nios II for project cordictest2 ****
+23:55:05 **** Incremental Build of configuration Nios II for project cordictest2 ****
 make all 
 Info: Building ../cordictest2_bsp/
 D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
 [BSP build complete]
 [cordictest2 build complete]
-05:12:31 **** Build of configuration Nios II for project cordictest2 ****
+23:55:39 **** Build of configuration Nios II for project cordictest2 ****
+make all 
+Info: Building ../cordictest2_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
+[BSP build complete]
+[cordictest2 build complete]
+23:55:40 **** Incremental Build of configuration Nios II for project cordictest2 ****
+make all 
+Info: Building ../cordictest2_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
+[BSP build complete]
+[cordictest2 build complete]
+23:55:55 **** Incremental Build of configuration Nios II for project cordictest2 ****
 make all 
 Info: Building ../cordictest2_bsp/
 D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
@@ -303,19 +222,13 @@ Info: Compiling hello_world.c to obj/default/hello_world.o
 nios2-elf-gcc -xc -MP -MMD -c -I../cordictest2_bsp//HAL/inc -I../cordictest2_bsp/ -I../cordictest2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
 Info: Linking cordictest2.elf
 nios2-elf-g++  -T'../cordictest2_bsp//linker.x' -msys-crt0='../cordictest2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cordictest2_bsp/   -Wl,-Map=cordictest2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o cordictest2.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1709932021 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
+nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1710345042 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
 Info: (cordictest2.elf) 70 KBytes program size (code + initialized data).
 Info:                   8115 KBytes free for stack + heap.
 Info: Creating cordictest2.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source cordictest2.elf >cordictest2.objdump
 [cordictest2 build complete]
-05:12:34 **** Incremental Build of configuration Nios II for project cordictest2 ****
-make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
-[BSP build complete]
-[cordictest2 build complete]
-05:30:51 **** Build of configuration Nios II for project cordictest2 ****
+00:12:30 **** Build of configuration Nios II for project cordictest2 ****
 make all 
 Info: Building ../cordictest2_bsp/
 D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
@@ -445,22 +358,22 @@ nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_bus
 [BSP build complete]
 Info: Linking cordictest2.elf
 nios2-elf-g++  -T'../cordictest2_bsp//linker.x' -msys-crt0='../cordictest2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cordictest2_bsp/   -Wl,-Map=cordictest2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o cordictest2.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1709933096 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
+nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1710346013 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
 Info: (cordictest2.elf) 70 KBytes program size (code + initialized data).
 Info:                   8115 KBytes free for stack + heap.
 Info: Creating cordictest2.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source cordictest2.elf >cordictest2.objdump
 [cordictest2 build complete]
-05:31:00 **** Incremental Build of configuration Nios II for project cordictest2 ****
+00:12:38 **** Incremental Build of configuration Nios II for project cordictest2 ****
 make all 
 Info: Building ../cordictest2_bsp/
 D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
 [BSP build complete]
 [cordictest2 build complete]
-05:48:05 **** Incremental Build of configuration Nios II for project cordictest2 ****
+00:13:47 **** Build of configuration Nios II for project ttt ****
 make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
+Info: Building ../ttt_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
 Compiling alt_alarm_start.c...
 nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
 Compiling alt_busy_sleep.c...
@@ -584,311 +497,116 @@ nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -
 Creating libhal_bsp.a...
 rm -f -f libhal_bsp.a
 nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
-[BSP build complete]
-Info: Linking cordictest2.elf
-nios2-elf-g++  -T'../cordictest2_bsp//linker.x' -msys-crt0='../cordictest2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cordictest2_bsp/   -Wl,-Map=cordictest2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o cordictest2.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1709933964 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
-Info: (cordictest2.elf) 70 KBytes program size (code + initialized data).
-Info:                   8115 KBytes free for stack + heap.
-Info: Creating cordictest2.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source cordictest2.elf >cordictest2.objdump
-[cordictest2 build complete]
-06:04:17 **** Incremental Build of configuration Nios II for project cordictest2 ****
-make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
-Compiling alt_alarm_start.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
-Compiling alt_busy_sleep.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
-Compiling alt_close.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
-Compiling alt_dcache_flush.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
-Compiling alt_dcache_flush_all.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
-Compiling alt_dcache_flush_no_writeback.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
-Compiling alt_dev.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
-Compiling alt_dma_rxchan_open.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
-Compiling alt_dma_txchan_open.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
-Compiling alt_ecc_fatal_exception.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
-Compiling alt_exception_entry.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
-Compiling alt_exit.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
-Compiling alt_fcntl.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
-Compiling alt_fd_lock.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
-Compiling alt_fd_unlock.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
-Compiling alt_find_dev.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
-Compiling alt_find_file.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
-Compiling alt_flash_dev.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
-Compiling alt_fs_reg.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
-Compiling alt_fstat.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
-Compiling alt_get_fd.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
-Compiling alt_gmon.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
-Compiling alt_icache_flush.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
-Compiling alt_icache_flush_all.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
-Compiling alt_iic.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
-Compiling alt_iic_isr_register.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
-Compiling alt_instruction_exception_entry.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
-Compiling alt_instruction_exception_register.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
-Compiling alt_io_redirect.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
-Compiling alt_ioctl.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
-Compiling alt_irq_entry.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
-Compiling alt_irq_handler.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
-Compiling alt_irq_register.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
-Compiling alt_irq_vars.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
-Compiling alt_isatty.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
-Compiling alt_lseek.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
-Compiling alt_main.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
-Compiling alt_open.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
-Compiling alt_read.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
-Compiling alt_release_fd.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
-Compiling alt_remap_cached.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
-Compiling alt_remap_uncached.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
-Compiling alt_sbrk.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
-Compiling alt_software_exception.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
-Compiling alt_tick.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
-Compiling alt_uncached_free.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
-Compiling alt_uncached_malloc.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
-Compiling alt_write.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
-Compiling altera_nios2_gen2_irq.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
-Compiling crt0.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
-Compiling alt_sys_init.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
-Compiling altera_avalon_jtag_uart_fd.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_fd.o drivers/src/altera_avalon_jtag_uart_fd.c
-Compiling altera_avalon_jtag_uart_init.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_init.o drivers/src/altera_avalon_jtag_uart_init.c
-Compiling altera_avalon_jtag_uart_ioctl.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o drivers/src/altera_avalon_jtag_uart_ioctl.c
-Compiling altera_avalon_jtag_uart_read.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_read.o drivers/src/altera_avalon_jtag_uart_read.c
-Compiling altera_avalon_jtag_uart_write.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
-Compiling altera_avalon_sysid_qsys.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
-Compiling altera_avalon_timer_sc.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
-Compiling altera_avalon_timer_ts.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
-Compiling altera_avalon_timer_vars.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
-Creating libhal_bsp.a...
-rm -f -f libhal_bsp.a
-nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
-[BSP build complete]
-Info: Linking cordictest2.elf
-nios2-elf-g++  -T'../cordictest2_bsp//linker.x' -msys-crt0='../cordictest2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cordictest2_bsp/   -Wl,-Map=cordictest2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o cordictest2.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1709935176 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
-Info: (cordictest2.elf) 70 KBytes program size (code + initialized data).
-Info:                   8115 KBytes free for stack + heap.
-Info: Creating cordictest2.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source cordictest2.elf >cordictest2.objdump
-[cordictest2 build complete]
-06:04:58 **** Incremental Build of configuration Nios II for project cordictest2 ****
-make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
 [BSP build complete]
 Info: Compiling hello_world.c to obj/default/hello_world.o
-nios2-elf-gcc -xc -MP -MMD -c -I../cordictest2_bsp//HAL/inc -I../cordictest2_bsp/ -I../cordictest2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
-Info: Linking cordictest2.elf
-nios2-elf-g++  -T'../cordictest2_bsp//linker.x' -msys-crt0='../cordictest2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cordictest2_bsp/   -Wl,-Map=cordictest2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o cordictest2.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1709935176 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
-Info: (cordictest2.elf) 70 KBytes program size (code + initialized data).
-Info:                   8115 KBytes free for stack + heap.
-Info: Creating cordictest2.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source cordictest2.elf >cordictest2.objdump
-[cordictest2 build complete]
-03:24:54 **** Incremental Build of configuration Nios II for project cordictest2 ****
+nios2-elf-gcc -xc -MP -MMD -c -I../ttt_bsp//HAL/inc -I../ttt_bsp/ -I../ttt_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:30:0: warning: "step" redefined
+ #define step 1/1024.0
+ ^
+hello_world.c:27:0: note: this is the location of the previous definition
+ #define step 1/8.0
+ ^
+hello_world.c:31:0: warning: "N" redefined
+ #define N 261121
+ ^
+hello_world.c:28:0: note: this is the location of the previous definition
+ #define N 2041
+ ^
+hello_world.c: In function 'main':
+hello_world.c:64:4: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+    alt_putstr("hello");
+    ^
+hello_world.c:76:16: warning: implicit declaration of function 'times' [-Wimplicit-function-declaration]
+      exec_t1 = times(NULL); // get system time before starting the process
+                ^
+hello_world.c:81:9: warning: unused variable 'j' [-Wunused-variable]
+     int j;
+         ^
+Info: Linking ttt.elf
+nios2-elf-g++  -T'../ttt_bsp//linker.x' -msys-crt0='../ttt_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../ttt_bsp/   -Wl,-Map=ttt.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o ttt.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert ttt.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1710346013 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../first_nios2_system.sopcinfo
+Info: (ttt.elf) 71 KBytes program size (code + initialized data).
+Info:           8114 KBytes free for stack + heap.
+Info: Creating ttt.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source ttt.elf >ttt.objdump
+[ttt build complete]
+00:13:53 **** Incremental Build of configuration Nios II for project ttt ****
 make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
-Compiling alt_alarm_start.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
-Compiling alt_busy_sleep.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
-Compiling alt_close.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
-Compiling alt_dcache_flush.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
-Compiling alt_dcache_flush_all.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
-Compiling alt_dcache_flush_no_writeback.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
-Compiling alt_dev.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
-Compiling alt_dma_rxchan_open.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
-Compiling alt_dma_txchan_open.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
-Compiling alt_ecc_fatal_exception.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
-Compiling alt_exception_entry.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
-Compiling alt_exit.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
-Compiling alt_fcntl.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
-Compiling alt_fd_lock.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
-Compiling alt_fd_unlock.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
-Compiling alt_find_dev.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
-Compiling alt_find_file.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
-Compiling alt_flash_dev.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
-Compiling alt_fs_reg.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
-Compiling alt_fstat.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
-Compiling alt_get_fd.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
-Compiling alt_gmon.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
-Compiling alt_icache_flush.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
-Compiling alt_icache_flush_all.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
-Compiling alt_iic.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
-Compiling alt_iic_isr_register.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
-Compiling alt_instruction_exception_entry.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
-Compiling alt_instruction_exception_register.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
-Compiling alt_io_redirect.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
-Compiling alt_ioctl.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
-Compiling alt_irq_entry.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
-Compiling alt_irq_handler.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
-Compiling alt_irq_register.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
-Compiling alt_irq_vars.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
-Compiling alt_isatty.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
-Compiling alt_lseek.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
-Compiling alt_main.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
-Compiling alt_open.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
-Compiling alt_read.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
-Compiling alt_release_fd.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
-Compiling alt_remap_cached.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
-Compiling alt_remap_uncached.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
-Compiling alt_sbrk.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
-Compiling alt_software_exception.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
-Compiling alt_tick.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
-Compiling alt_uncached_free.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
-Compiling alt_uncached_malloc.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
-Compiling alt_write.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
-Compiling altera_nios2_gen2_irq.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
-Compiling crt0.S...
-nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
-Compiling alt_sys_init.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
-Compiling altera_avalon_jtag_uart_fd.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_fd.o drivers/src/altera_avalon_jtag_uart_fd.c
-Compiling altera_avalon_jtag_uart_init.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_init.o drivers/src/altera_avalon_jtag_uart_init.c
-Compiling altera_avalon_jtag_uart_ioctl.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o drivers/src/altera_avalon_jtag_uart_ioctl.c
-Compiling altera_avalon_jtag_uart_read.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_read.o drivers/src/altera_avalon_jtag_uart_read.c
-Compiling altera_avalon_jtag_uart_write.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
-Compiling altera_avalon_sysid_qsys.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
-Compiling altera_avalon_timer_sc.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
-Compiling altera_avalon_timer_ts.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
-Compiling altera_avalon_timer_vars.c...
-nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
-Creating libhal_bsp.a...
-rm -f -f libhal_bsp.a
-nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o
+Info: Building ../ttt_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
 [BSP build complete]
-Info: Linking cordictest2.elf
-nios2-elf-g++  -T'../cordictest2_bsp//linker.x' -msys-crt0='../cordictest2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../cordictest2_bsp/   -Wl,-Map=cordictest2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o cordictest2.elf obj/default/hello_world.o -lm -msys-lib=m
-nios2-elf-insert cordictest2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1710098404 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/cordictest2_bsp/../../first_nios2_system.sopcinfo
-Info: (cordictest2.elf) 70 KBytes program size (code + initialized data).
-Info:                   8115 KBytes free for stack + heap.
-Info: Creating cordictest2.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source cordictest2.elf >cordictest2.objdump
-[cordictest2 build complete]
-03:26:41 **** Incremental Build of configuration Nios II for project cordictest2 ****
+[ttt build complete]
+00:14:20 **** Incremental Build of configuration Nios II for project ttt ****
 make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
+Info: Building ../ttt_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
 [BSP build complete]
-[cordictest2 build complete]
-03:27:10 **** Incremental Build of configuration Nios II for project cordictest2 ****
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../ttt_bsp//HAL/inc -I../ttt_bsp/ -I../ttt_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:30:0: warning: "step" redefined
+ #define step 1/1024.0
+ ^
+hello_world.c:27:0: note: this is the location of the previous definition
+ #define step 1/8.0
+ ^
+hello_world.c:31:0: warning: "N" redefined
+ #define N 261121
+ ^
+hello_world.c:28:0: note: this is the location of the previous definition
+ #define N 2041
+ ^
+hello_world.c: In function 'main':
+hello_world.c:64:4: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+    alt_putstr("hello");
+    ^
+hello_world.c:76:16: warning: implicit declaration of function 'times' [-Wimplicit-function-declaration]
+      exec_t1 = times(NULL); // get system time before starting the process
+                ^
+hello_world.c:81:9: warning: unused variable 'j' [-Wunused-variable]
+     int j;
+         ^
+Info: Linking ttt.elf
+nios2-elf-g++  -T'../ttt_bsp//linker.x' -msys-crt0='../ttt_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../ttt_bsp/   -Wl,-Map=ttt.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o ttt.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert ttt.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1710346013 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../first_nios2_system.sopcinfo
+Info: (ttt.elf) 71 KBytes program size (code + initialized data).
+Info:           8114 KBytes free for stack + heap.
+Info: Creating ttt.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source ttt.elf >ttt.objdump
+[ttt build complete]
+00:19:49 **** Incremental Build of configuration Nios II for project ttt ****
 make all 
-Info: Building ../cordictest2_bsp/
-D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../cordictest2_bsp/
+Info: Building ../ttt_bsp/
+D:/quartus18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../ttt_bsp/
 [BSP build complete]
-[cordictest2 build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../ttt_bsp//HAL/inc -I../ttt_bsp/ -I../ttt_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:30:0: warning: "step" redefined
+ #define step 1/1024.0
+ ^
+hello_world.c:27:0: note: this is the location of the previous definition
+ #define step 1/8.0
+ ^
+hello_world.c:31:0: warning: "N" redefined
+ #define N 261121
+ ^
+hello_world.c:28:0: note: this is the location of the previous definition
+ #define N 2041
+ ^
+hello_world.c: In function 'main':
+hello_world.c:76:4: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+    alt_putstr("hello");
+    ^
+hello_world.c:88:16: warning: implicit declaration of function 'times' [-Wimplicit-function-declaration]
+      exec_t1 = times(NULL); // get system time before starting the process
+                ^
+hello_world.c:93:9: warning: unused variable 'j' [-Wunused-variable]
+     int j;
+         ^
+Info: Linking ttt.elf
+nios2-elf-g++  -T'../ttt_bsp//linker.x' -msys-crt0='../ttt_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../ttt_bsp/   -Wl,-Map=ttt.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o ttt.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert ttt.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x1001030 --timestamp 1710346013 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name first_nios2_system --quartus_project_dir "C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc" --jdi C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../hello_world.jdi --sopcinfo C:/Users/linmo/Desktop/DSD/test/system_template_de1_soc/software/ttt_bsp/../../first_nios2_system.sopcinfo
+Info: (ttt.elf) 75 KBytes program size (code + initialized data).
+Info:           8109 KBytes free for stack + heap.
+Info: Creating ttt.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source ttt.elf >ttt.objdump
+[ttt build complete]

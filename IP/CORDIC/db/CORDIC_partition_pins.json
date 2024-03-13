@@ -108,10 +108,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "fixedpoint_in[2]",
-					"strict" : false
-				},
-				{
 					"name" : "fixedpoint_in[3]",
 					"strict" : false
 				},
@@ -201,6 +197,10 @@
 				},
 				{
 					"name" : "fixedpoint_in[25]",
+					"strict" : false
+				},
+				{
+					"name" : "fixedpoint_in[26]",
 					"strict" : false
 				},
 				{
@@ -309,6 +309,10 @@
 				},
 				{
 					"name" : "fixedpoint_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "fixedpoint_out[27]",
 					"strict" : false
 				},
 				{

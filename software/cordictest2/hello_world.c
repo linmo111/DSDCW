@@ -5,9 +5,9 @@
 
 int main()
 {
- float cos1 = cos(-0.6);
+ float cos1 = cos(-0.5);
 
- float cos2 = ALT_CI_CORDICMULTI_0(-0.6);
+ float cos2 = ALT_CI_CORDICMULTI_0(-0.5);
 
  printf("Result: %f \n",cos1);
 

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2024-3-11 3:24:48</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1710098688980</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2024-3-14 0:12:15</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1710346335143</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\linmo\Desktop\DSD\test\system_template_de1_soc\software\cordictest2_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\first_nios2_system.sopcinfo</SopcDesignFile>

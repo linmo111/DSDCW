@@ -8,8 +8,8 @@ module tb ();
 	reg rst;
 	//Output from DUT is wire type
 	wire [31:0] result;
-	wire [25:0] fixedpoint_in;
-	wire [25:0] fixedpoint_out;
+	wire [27:0] fixedpoint_in;
+	wire [27:0] fixedpoint_out;
 //	wire [23:0] fixedmanti;
 //	wire [7:0] shiftnum;
 
